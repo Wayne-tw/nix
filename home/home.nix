@@ -39,7 +39,7 @@
       # bat --plain for unformatted cat
       catp = "bat -P";
       cat = "bat";
-    }:
+    };
   };
 
   programs = {
