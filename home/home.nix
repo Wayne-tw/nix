@@ -5,6 +5,7 @@
     ./tmux.nix
     ./git.nix
     ./wezterm.nix
+    ./emacs.nix
   ];
 
   home = {
