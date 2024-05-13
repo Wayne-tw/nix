@@ -8,18 +8,30 @@
       enable = true;
   };
 
-  # Doomemacs Prerequisites
+  # Doomemacs
+  # https://github.com/hlissner/dotfiles/blob/master/modules/editors/emacs.nix
+  # .Doomemacs Prerequisites
   programs.git.enable = true;
-  home.packages = [
-      pkgs.ripgrep
-      pkgs.coreutils
-      pkgs.fd
+  home.packages = with pkgs; [
+      (ripgrep.override {withPCRE2 = true;})
+      coreutils
+      fd
+      binutils
+      gnutls
+      fd
+      imagemagick
+      zstd
+      sqlite
+      editorconfig-core-c
+      emacs-all-the-icons-fonts
   ];
-  # TODO Doomemacs Configuration
+  # TODO .Doomemacs Installation
+  
+  # TODO .Doomemacs Configuration
   # https://discourse.nixos.org/t/advice-needed-installing-doom-emacs/8806/4
-  #home.file.".doom.d" = {
-  #source = github.com/MatthiasScholz/...;
-  #recursive = true;
-  #onChange = readFile path/to/reload;
-  #};
+  home.file.".doom.d" = {
+    source = github.com/MatthiasScholzTW/doom-emacs-config.git;
+    recursive = true;
+    # TODO onChange = readFile path/to/reload;
+  };
 }
