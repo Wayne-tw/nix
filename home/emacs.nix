@@ -12,7 +12,7 @@
   programs.git.enable = true;
   packages = [
       pkgs.ripgrep
-      pkgs.corutils
+      pkgs.coreutils
       pkgs.fd
   ];
   # TODO Doomemacs Configuration
