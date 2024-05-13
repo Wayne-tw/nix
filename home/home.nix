@@ -32,6 +32,10 @@
 
     sessionVariables = {
     };
+
+    shellAliases = {
+      "rebuild" = "darwin-rebuild switch --flake github:matthiasscholz/dotfiles-slim --refresh":
+    }:
   };
 
   programs = {
