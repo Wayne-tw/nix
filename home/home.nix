@@ -148,7 +148,8 @@
     # NOTE Migrated from dotfiles-light
     eza = {
       enable = true;
-      enableAliases = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
       extraOptions = [
         "--group-directories-first"
        "--header"
