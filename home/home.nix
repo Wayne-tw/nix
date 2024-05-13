@@ -159,7 +159,7 @@
       config = {
         theme = "TwoDark";
       };
-    }
+    };
     atuin.enable = true; 
     zoxide.enable = true;
     dircolors.enable = true
