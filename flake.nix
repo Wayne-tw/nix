@@ -46,7 +46,7 @@
     };
 
     darwinConfigurations = {
-      "MacBook-Pro" = darwin.lib.darwinSystem {
+      "Matthiass-MacBook-Pro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
           ./darwin/darwin.nix
