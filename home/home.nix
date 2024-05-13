@@ -34,7 +34,11 @@
     };
 
     shellAliases = {
-      "rebuild" = "darwin-rebuild switch --flake github:matthiasscholz/dotfiles-slim --refresh":
+      "rebuild" = "darwin-rebuild switch --flake github:matthiasscholz/dotfiles-slim --refresh";
+
+      # bat --plain for unformatted cat
+      catp = "bat -P";
+      cat = "bat";
     }:
   };
 
