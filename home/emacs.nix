@@ -30,7 +30,7 @@
   # TODO .Doomemacs Configuration
   # https://discourse.nixos.org/t/advice-needed-installing-doom-emacs/8806/4
   home.file.".doom.d" = {
-    source = github.com/MatthiasScholzTW/doom-emacs-config.git;
+    source = builtins.fetchGit "https://github.com/MatthiasScholzTW/doom-emacs-config.git";
     recursive = true;
     # TODO onChange = readFile path/to/reload;
   };
