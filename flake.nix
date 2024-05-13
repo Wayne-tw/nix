@@ -20,26 +20,10 @@
   outputs = {
     self,
     darwin,
-    nixos-wsl,
     flake-utils,
     home-manager,
     ...
   } @ inputs: {
-    nixosConfigurations = {
-      "nixos" = inputs.nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          nixos-wsl.nixosModules.wsl
-          ./nixos/configuration.nix
-          ./config/wsl
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.users.nixos = import ./home/home.nix;
-          }
-        ];
-      };
-    };
-
     darwinConfigurations = {
       "Matthiass-MacBook-Pro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
