@@ -22,5 +22,5 @@
 
   users.defaultUserShell = pkgs.fish;
 
-  time.timeZone = "America/Chicago";
+  time.timeZone = "Europe/Berlin";
 }

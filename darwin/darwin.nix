@@ -9,8 +9,10 @@
     ];
 
   # Use a custom configuration.nix location.
+  # NOTE keep the default location to support use of `topgrade`
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
-  environment.darwinConfig = "$HOME/src/github.com/evantravers/dotfiles";
+  #environment.darwinConfig = "$HOME/src/github.com/matthiasscholz/dotfiles-slim";
+  environment.darwinConfig = "$HOME/.config/nixpkgs/darwin";
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
@@ -67,23 +69,13 @@
     casks = [
       "1password"
       "bartender"
-      "brave-browser"
-      "fantastical"
-      "firefox"
-      "hammerspoon"
       "karabiner-elements"
-      "obsidian"
       "raycast"
-      "soundsource"
       "wezterm"
     ];
 
-    masApps = {
-      "Drafts" = 1435957248;
-      "Reeder" = 1529448980;
-      "Things" = 904280696;
-      "Timery" = 1425368544;
-    };
+    #masApps = {
+    #};
   };
 
   system.defaults = {

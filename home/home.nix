@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./nvim.nix
     ./tmux.nix
     ./git.nix
     ./wezterm.nix
@@ -23,13 +22,13 @@
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.
-    file = {
-      hammerspoon = lib.mkIf pkgs.stdenvNoCC.isDarwin {
-        source = ./../config/hammerspoon;
-        target = ".hammerspoon";
-        recursive = true;
-      };
-    };
+    #file = {
+    #  hammerspoon = lib.mkIf pkgs.stdenvNoCC.isDarwin {
+    #    source = ./../config/hammerspoon;
+    #    target = ".hammerspoon";
+    #    recursive = true;
+    #  };
+    #};
 
     sessionVariables = {
     };

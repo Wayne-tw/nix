@@ -1,5 +1,5 @@
 {
-  description = "Evan's Nix System Configuration";
+  description = "Nix System Configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -46,30 +46,30 @@
     };
 
     darwinConfigurations = {
-      "G2157QVFX1" = darwin.lib.darwinSystem {
+      "MacBook-Pro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
           ./darwin/darwin.nix
           home-manager.darwinModules.home-manager
           {
             home-manager = {
-              users.etravers = import ./home/home.nix;
+              users.matthias = import ./home/home.nix;
             };
-            users.users.etravers.home = "/Users/etravers";
+            users.users.matthias.home = "/Users/matthias";
           }
         ];
         specialArgs = { inherit inputs; };
       };
-      "Evans-MacBook-Pro" = darwin.lib.darwinSystem {
+      "MacBook-Pro-Home" = darwin.lib.darwinSystem {
         system = "x86_64-darwin";
         modules = [
           ./darwin/darwin.nix
           home-manager.darwinModules.home-manager
           {
             home-manager = {
-              users.evan = import ./home/home.nix;
+              users.matthias = import ./home/home.nix;
             };
-            users.users.evan.home = "/Users/evan";
+            users.users.matthias.home = "/Users/matthias";
           }
         ];
         specialArgs = { inherit inputs; };

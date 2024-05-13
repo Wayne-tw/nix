@@ -55,13 +55,13 @@
   r = log --graph --pretty='tformat:%C(auto,yellow)%h%C(auto,reset) %C(auto,green)(%ar)%C(auto,reset) %C(auto,bold blue)<%an>%C(auto,reset) %C(auto,red)%d%C(auto,reset) %s' -20
   ra = log --graph --all --pretty='tformat:%C(auto,yellow)%h%C(auto,reset) %C(auto,green)(%ar)%C(auto,reset) %C(auto,bold blue)<%an>%C(auto,reset) %C(auto,red)%d%C(auto,reset) %s' -20
   lf = log --first-parent --oneline
-  my-commits = log --author='Evan Travers' --author-date-order --date=format:'%a %b %d %r' --format='%h | %ad | %s'
+  my-commits = log --author='Matthias Scholz' --author-date-order --date=format:'%a %b %d %r' --format='%h | %ad | %s'
   jump = "!$(brew --prefix git)/share/git-core/contrib/git-jump/git-jump"
 [user]
-  email = evantravers@gmail.com
-  name = Evan Travers
+  email = matthias.scholz@thoughtworks.com
+  name = Matthias Scholz
 [github]
-  user = evantravers
+  user = matthiasscholz
 [hub]
   protocol = ssh
 [filter "lfs"]
