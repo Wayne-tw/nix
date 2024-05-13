@@ -154,6 +154,7 @@
     };
 
     # NOTE Migrated from dotfiles-light
+    # Replacement for 'ls'
     eza = {
       enable = true;
       enableBashIntegration = true;
