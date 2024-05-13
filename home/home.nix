@@ -162,7 +162,7 @@
     };
     atuin.enable = true; 
     zoxide.enable = true;
-    dircolors.enable = true
+    dircolors.enable = true;
 
     starship = {
       enable = true;
