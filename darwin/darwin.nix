@@ -64,11 +64,11 @@
   };
 
   homebrew = {
+    # NOTE Enabling this option does not install Homebrew, see the Homebrew website for installation instructions.
     enable = true;
 
     casks = [
       "1password"
-      "bartender"
       "karabiner-elements"
       "raycast"
       "wezterm"
