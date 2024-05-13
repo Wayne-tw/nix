@@ -153,7 +153,7 @@
         "--group-directories-first"
        "--header"
       ];
-    }
+    };
     bat = {
       enable = true;
       config = {
