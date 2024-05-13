@@ -10,7 +10,7 @@
 
   # Doomemacs Prerequisites
   programs.git.enable = true;
-  packages = [
+  home.packages = [
       pkgs.ripgrep
       pkgs.coreutils
       pkgs.fd
