@@ -17,7 +17,7 @@ return {
       harfbuzz_features = { "calt", "liga", "dlig", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08" },
     },
   },
-  font_size = 16.0;
+  font_size = 12.0;
   line_height = 1.1,
   -- theme
   color_scheme = Scheme_for_appearance(wezterm.gui.get_appearance()),
