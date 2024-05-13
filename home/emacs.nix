@@ -7,7 +7,8 @@
   # https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#nixos
   programs.emacs = {
       enable = true;
-      package = pkgs.emacs-unstable;
+      # FIXME provide support for more recent versions
+      # package = pkgs.emacs-unstable;
   };
   # TODO Understand if needed - doomemacs is my sensible default
   # https://github.com/league/chemacs2nix/tree/main
