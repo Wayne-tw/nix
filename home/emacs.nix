@@ -27,11 +27,11 @@
   ];
   # TODO .Doomemacs Installation
   
-  # TODO .Doomemacs Configuration
+  # FIXME .Doomemacs Configuration
   # https://discourse.nixos.org/t/advice-needed-installing-doom-emacs/8806/4
-  home.file.".doom.d" = {
-    source = builtins.fetchGit "https://github.com/MatthiasScholzTW/doom-emacs-config.git";
-    recursive = true;
-    # TODO onChange = readFile path/to/reload;
-  };
+  #home.file.".doom.d" = {
+  #  source = builtins.fetchGit "https://github.com/MatthiasScholzTW/doom-emacs-config.git";
+  #  recursive = true;
+  #  # TODO onChange = readFile path/to/reload;
+  #};
 }
