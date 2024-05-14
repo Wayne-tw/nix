@@ -34,4 +34,15 @@
   #  recursive = true;
   #  # TODO onChange = readFile path/to/reload;
   #};
+
+  programs.zsh.initExtra = ''
+    # TODO Check if doomemacs already provides this functionality somehow, via :os tty
+    # Use vterm provide configuration files to configure integration
+    # https://github.com/akermu/emacs-libvterm?tab=readme-ov-file#shell-side-configuration-files
+    if [[ "$INSIDE_EMACS" = 'vterm' ]] \
+      && [[ -n $\{EMACS_VTERM_PATH\} ]] \
+      && [[ -f $\{EMACS_VTERM_PATH\}/etc/emacs-vterm-zsh.sh ]]; then
+  	  source $\{EMACS_VTERM_PATH\}/etc/emacs-vterm-zsh.sh
+    fi
+    '';
 }

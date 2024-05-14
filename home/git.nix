@@ -10,4 +10,10 @@
 
     lfs.enable = true;
   };
+
+  # TODO decide on usage
+  # git alternative
+  programs.jujutsu = {
+      enable = true;
+    };
 }
