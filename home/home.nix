@@ -39,12 +39,4 @@
       "rebuild" = "darwin-rebuild switch --flake github:matthiasscholz/dotfiles-slim --refresh";
     };
   };
-
-  programs = {
-
-    # TODO decide usage
-    jujutsu = {
-      enable = true;
-    };
-  };
 }
