@@ -4,13 +4,16 @@ This is to describe the barebones development system I use. Supports Intel and S
 
 ## Tasks
 
-- [ ] Add doomemcs configuration
 - [ ] Add default browser
 - [ ] Support neo2 keyboard layout
 - [ ] Add Docker and colima
 - [ ] Support touchid for cli
+- [ ] Deal with project specific communication tooling: mattermost, ms-teams, zoom
+- [ ] Beeper, logseq, draw.io, notion, notion-calendar, spotify
 - [ ] Add statusbar
+- [ ] Add doomemcs configuration, dotenc, ispell
 - [ ] Decide for shell fish or zsh
+- [ ] raycast plugins
 
 ## Install Nix
 
