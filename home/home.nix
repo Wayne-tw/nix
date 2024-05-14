@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./neo2.nix
     ./shell.nix
     ./wezterm.nix
     ./direnv.nix
