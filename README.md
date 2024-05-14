@@ -34,3 +34,8 @@ On OSX: [Determinate Systems Installer](https://github.com/DeterminateSystems/ni
 or leveage the alias
 
 `rebuild`
+
+## References
+
+- [source](https://github.com/evantravers/dotfiles)
+- [nix-darwin references, high amount of modules and Neo2](https://github.com/Cu3PO42/gleaming-glacier/tree/master)
