@@ -10,7 +10,52 @@
   };
 
   programs = {
-    # Use fish
+    # Helper
+    # .Replacement for 'ls'
+    eza = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      extraOptions = [
+        "--group-directories-first"
+       "--header"
+      ];
+    };
+    # .Replacement for 'cat'
+    bat = {
+      enable = true;
+      config = {
+        theme = "TwoDark";
+      };
+    };
+    atuin.enable = true;
+    zoxide.enable = true;
+    dircolors.enable = true;
+
+    # Prompt
+    starship = {
+      enable = true;
+
+      settings = {
+        command_timeout = 100;
+        format = "[$all](dimmed white)";
+
+        character = {
+          success_symbol = "[❯](dimmed green)";
+          error_symbol = "[❯](dimmed red)";
+        };
+
+        git_status = {
+          style = "bold yellow";
+          format = "([$all_status$ahead_behind]($style) )";
+        };
+
+        jobs.disabled = true;
+      };
+    };
+
+    # fish
+    # TODO decide on use
     fish = {
       enable = true;
 
@@ -82,6 +127,7 @@
       apil = "restish tsl";
     };
 
-
+    # TODO Check if needed
+    bash.enable = true;
   };
 }
