@@ -9,10 +9,10 @@
     ];
 
   # Use a custom configuration.nix location.
-  # NOTE keep the default location to support use of `topgrade`
+  # TODO keep the default location to support use of `topgrade`
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
-  #environment.darwinConfig = "$HOME/src/github.com/matthiasscholz/dotfiles-slim";
-  environment.darwinConfig = "$HOME/.config/nixpkgs/darwin";
+  environment.darwinConfig = "$HOME/project/config/dotfiles-slim";
+  #environment.darwinConfig = "$HOME/.config/nixpkgs/darwin";
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
