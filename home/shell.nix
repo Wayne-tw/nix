@@ -6,6 +6,8 @@
       # bat --plain for unformatted cat
       catp = "bat -P";
       cat = "bat";
+      # replace cd
+      cd = "z";
     };
   };
 
@@ -28,7 +30,9 @@
         theme = "TwoDark";
       };
     };
+    # Shell history replacement
     atuin.enable = true;
+    # Smarter 'cd' with 'z'
     zoxide.enable = true;
     dircolors.enable = true;
 
