@@ -97,4 +97,15 @@
       NSAutomaticWindowAnimationsEnabled = false;
     };
   };
+
+  # Neo2 Keyboard Layout
+  # needs additional configuration of karabiner-elements as part of home-manager /home/home.nix
+  # https://github.com/Cu3PO42/gleaming-glacier/blob/5abb8c0a3fb72cafbc7ca113e5f135142d0b51c8/modules/darwin/neo2/default.nix#L9
+  # https://github.com/Cu3PO42/gleaming-glacier/blob/5abb8c0a3fb72cafbc7ca113e5f135142d0b51c8/config/karabiner/LICENSE.md?plain=1
+  system.activationScripts.extraActivation.text = ''
+      echo "INFO :: Copying Neo layout into system wide folder"
+      cp ${./neo.icns} "/Library/Keyboard Layouts/neo.icns"
+      cp ${./neo.keylayout} "/Library/Keyboard Layouts/neo.keylayout"
+   '';
+
 }

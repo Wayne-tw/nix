@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./neo2.nix
     ./shell.nix
     ./wezterm.nix
     ./direnv.nix
@@ -39,5 +38,8 @@
     shellAliases = {
       "rebuild" = "darwin-rebuild switch --flake github:matthiasscholz/dotfiles-slim --refresh";
     };
+
+    # Neo2 Configuration via Karabiner Elements
+    file.".config/karabiner/karabiner.json".source = ../config/karabiner/karabiner.json
   };
 }
