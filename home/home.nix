@@ -40,6 +40,6 @@
     };
 
     # Neo2 Configuration via Karabiner Elements
-    file.".config/karabiner/karabiner.json".source = ../config/karabiner/karabiner.json
+    file.".config/karabiner/karabiner.json".source = ../config/karabiner/karabiner.json;
   };
 }
