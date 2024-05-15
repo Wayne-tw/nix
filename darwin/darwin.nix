@@ -65,7 +65,7 @@
 
     # TODO Understand if there is potential to overwrite - since assignment is used
   programs.zsh.initExtra = ''
-    export PATH="${PATH}:/opt/homebrew/bin"
+    export PATH="$\{PATH\}:/opt/homebrew/bin"
    '';
 
   homebrew = {
