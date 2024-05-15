@@ -73,6 +73,8 @@
       "raycast"
       "wezterm"
       "vivaldi"
+      # aws specific tooling - currently unsupported package
+      "gossm"
     ];
 
     #masApps = {
