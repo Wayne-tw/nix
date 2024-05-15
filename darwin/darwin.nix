@@ -71,6 +71,10 @@
       "gjbae1212/gossm"
     ];
 
+    brews = [
+      "gossm"
+    ];
+
     casks = [
       "1password"
       "karabiner-elements"
@@ -78,7 +82,6 @@
       "wezterm"
       "vivaldi"
       # aws specific tooling - currently unsupported package
-      "gossm"
     ];
 
     #masApps = {
