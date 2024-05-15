@@ -24,7 +24,9 @@
       sqlite
       editorconfig-core-c
       emacs-all-the-icons-fonts
-      cmake # to build vterm
+      # to build vterm
+      cmake
+      libtool
   ];
   # TODO .Doomemacs Installation
   
