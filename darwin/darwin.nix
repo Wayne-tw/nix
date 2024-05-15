@@ -63,6 +63,11 @@
     };
   };
 
+    # TODO Understand if there is potential to overwrite - since assignment is used
+  programs.zsh.initExtra = ''
+    export PATH="${PATH}:/opt/homebrew/bin"
+   '';
+
   homebrew = {
     # NOTE Enabling this option does not install Homebrew, see the Homebrew website for installation instructions.
     enable = true;
