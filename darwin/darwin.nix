@@ -72,6 +72,7 @@
       "karabiner-elements"
       "raycast"
       "wezterm"
+      "vivaldi"
     ];
 
     #masApps = {

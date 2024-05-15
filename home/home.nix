@@ -20,7 +20,6 @@
       marksman
       nixd
       ripgrep
-      vivaldi
     ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
