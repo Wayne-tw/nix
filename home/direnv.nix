@@ -15,8 +15,6 @@
   # https://rycee.gitlab.io/home-manager/options.html#opt-programs.zsh.initExtra
   # TODO Understand if there is potential to overwrite - since assignment is used
   programs.zsh.initExtra = ''
-    export PATH="$\{PATH\}:$\{HOME\}/bin"
-
     dvd () {
       local readonly TEMPLATE=$1
       echo "use flake \"github:MatthiasScholz/templates?dir=flakes/$TEMPLATE\"" >> .envrc

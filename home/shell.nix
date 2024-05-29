@@ -11,6 +11,14 @@
     };
   };
 
+  # TODO Understand when the PATH is set
+  home.seesionPath = [
+    # FIXME set the path when respective application gets installed
+    "$HOME/bin" # tfswitch
+    "$HOME/go/bin" # go
+  ];
+
+
   programs = {
     # Helper
     # .Replacement for 'ls'
