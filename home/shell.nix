@@ -68,35 +68,35 @@
 
     # fish
     # TODO decide on use
-    fish = {
-      enable = true;
+    # fish = {
+    #   enable = true;
 
-      interactiveShellInit = ''
-        set fish_greeting # N/A
-      '';
+    #   interactiveShellInit = ''
+    #     set fish_greeting # N/A
+    #   '';
 
-      plugins = [
-        {
-          # TODO: Remove this
-          name = "fish-asdf";
-          src = pkgs.fetchFromGitHub {
-            owner = "rstacruz";
-            repo = "fish-asdf";
-            rev = "5869c1b1ecfba63f461abd8f98cb21faf337d004";
-            sha256 = "39L6UDslgIEymFsQY8klV/aluU971twRUymzRL17+6c=";
-          };
-        }
-        {
-          name = "nix-env";
-          src = pkgs.fetchFromGitHub {
-            owner = "lilyball";
-            repo = "nix-env.fish";
-            rev = "7b65bd228429e852c8fdfa07601159130a818cfa";
-            hash = "sha256-RG/0rfhgq6aEKNZ0XwIqOaZ6K5S4+/Y5EEMnIdtfPhk=";
-          };
-        }
-      ];
-    };
+    #   plugins = [
+    #     {
+    #       # TODO: Remove this
+    #       name = "fish-asdf";
+    #       src = pkgs.fetchFromGitHub {
+    #         owner = "rstacruz";
+    #         repo = "fish-asdf";
+    #         rev = "5869c1b1ecfba63f461abd8f98cb21faf337d004";
+    #         sha256 = "39L6UDslgIEymFsQY8klV/aluU971twRUymzRL17+6c=";
+    #       };
+    #     }
+    #     {
+    #       name = "nix-env";
+    #       src = pkgs.fetchFromGitHub {
+    #         owner = "lilyball";
+    #         repo = "nix-env.fish";
+    #         rev = "7b65bd228429e852c8fdfa07601159130a818cfa";
+    #         hash = "sha256-RG/0rfhgq6aEKNZ0XwIqOaZ6K5S4+/Y5EEMnIdtfPhk=";
+    #       };
+    #     }
+    #   ];
+    # };
 
     # ZSH
     zsh.enable = true;
