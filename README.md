@@ -29,10 +29,6 @@ On OSX: [Determinate Systems Installer](https://github.com/DeterminateSystems/ni
 
 ### Darwin
 
-`darwin-rebuild switch --flake ~/src/github.com/matthiasscholz/dotfiles-slim`
-
-or leveage the alias
-
 `rebuild`
 
 ## References
