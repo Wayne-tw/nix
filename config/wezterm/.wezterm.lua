@@ -32,9 +32,9 @@ return {
   window_close_confirmation = 'NeverPrompt',
   adjust_window_size_when_changing_font_size = false,
   hide_tab_bar_if_only_one_tab = true,
-  -- keyboard
-  send_composed_key_when_left_alt_is_pressed = false,
-  send_composed_key_when_right_alt_is_pressed = false,
+  -- keyboard - neo2 support (https://github.com/wez/wezterm/issues/4001)
+  send_composed_key_when_left_alt_is_pressed = true,
+  send_composed_key_when_right_alt_is_pressed = true,
   -- term
   term = "wezterm",
 }
