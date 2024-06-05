@@ -71,6 +71,7 @@
           }
 
           # FIXME move inside ./darwin/darwin.nix file if possible - keep the flake short
+          # TODO Do this for all MacOSX systems NOT only this single one
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
