@@ -85,16 +85,24 @@
     ];
 
     casks = [
+      # TODO Migrate to nixpkgs _1password-gui, _1password (cli)
       "1password"
+      "beeper"
+      "disk-inventory-x"
+      "notion"
+      "notion-calendar"
+      # TODO Migrate to nixpkgs
       "karabiner-elements"
       "raycast"
+      # TODO Migrate to nixpkgs
       "wezterm"
       "vivaldi"
       # aws specific tooling - currently unsupported package
     ];
 
-    #masApps = {
-    #};
+    masApps = {
+      "Kindle" = 405399194;
+    };
   };
 
   system.defaults = {

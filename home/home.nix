@@ -7,6 +7,7 @@
     ./direnv.nix
     ./git.nix
     ./emacs.nix
+    ./music.nix
   ];
 
   home = {
@@ -20,6 +21,8 @@
       marksman
       nixd
       ripgrep
+      # Base tooling
+      drawio
     ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
