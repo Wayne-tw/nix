@@ -98,6 +98,11 @@
       "wezterm"
       "vivaldi"
       # aws specific tooling - currently unsupported package
+      # TODO Migrate to engagement specific stuff
+      # TODO how to install the plugins for logseq?
+      "logseq"
+      "mattermost"
+      "microsoft-teams"
     ];
 
     masApps = {

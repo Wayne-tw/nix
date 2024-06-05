@@ -8,6 +8,9 @@
     ./git.nix
     ./emacs.nix
     ./music.nix
+    ./work.nix
+    # project specific
+    ./p1.nix
   ];
 
   home = {
