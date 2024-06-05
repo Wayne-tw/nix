@@ -76,6 +76,7 @@
   homebrew = {
     # NOTE Enabling this option does not install Homebrew, see the Homebrew website for installation instructions.
     enable = true;
+    global.autoUpdate = true;
 
     taps = [
       "gjbae1212/gossm"
