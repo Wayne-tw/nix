@@ -66,6 +66,13 @@
   #  export PATH="$\{PATH\}:/opt/homebrew/bin"
   # '';
 
+  # Storage optimisation
+  # https://nixos.wiki/wiki/Storage_optimization
+  # TODO should be os independent
+  nix.extraOptions = ''
+    auto-optimise-store = true
+  '';
+
   homebrew = {
     # NOTE Enabling this option does not install Homebrew, see the Homebrew website for installation instructions.
     enable = true;
