@@ -41,24 +41,21 @@
 
   services = {
     yabai = {
-      enable = false;
+      enable = true;
       config = {
-        layout = "bsp";
+        layout = "float";
         mouse_modifier = "ctrl";
+        mouse_action1  = "resize";
         mouse_drop_action = "stack";
-        window_shadow = "float";
-        window_gap = "20";
+        window_gap     = "20";
+        window_border  = "off";
+        window_opacity = "off";
+        window_shadow  = "off";
       };
       extraConfig = ''
-        yabai -m signal --add event=display_added action="yabai -m rule --remove label=calendar && yabai -m rule --add app='Fantastical' label='calendar' display=east" active=yes
-        yabai -m signal --add event=display_removed action="yabai -m rule --remove label=calendar && yabai -m rule --add app='Fantastical' label='calendar' native-fullscreen=on" active=yes
-        yabai -m rule --add app='OBS' display=east
         yabai -m rule --add app='Spotify' display=east
 
-        yabai -m rule --add app='Cardhop' manage=off
-        yabai -m rule --add app='Pop' manage=off
         yabai -m rule --add app='System Settings' manage=off
-        yabai -m rule --add app='Timery' manage=off
       '';
     };
   };
