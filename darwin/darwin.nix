@@ -100,6 +100,8 @@
       "logseq"
       "mattermost"
       "microsoft-teams"
+      # TODO separate private stuff
+      "orcaslicer"
     ];
 
     masApps = {
