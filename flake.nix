@@ -2,7 +2,8 @@
   description = "Nix System Configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    # The main nixpkgs instance
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # TODO separate homebrew setup and combine with homebrew usage
     # For installing homebrew
@@ -45,7 +46,11 @@
     homebrew-cask,
     homebrew-bundle,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    nixpkgsConfig = {
+      config.allowUnfree = true;
+    };
+  in {
     darwinConfigurations = {
       "Matthiass-MacBook-Pro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
@@ -53,7 +58,13 @@
           ./darwin/darwin.nix
           home-manager.darwinModules.home-manager
           {
+            nixpkgs = nixpkgsConfig;
+
             home-manager = {
+              # FIXME sync with all macosx configurations
+              useGlobalPkgs = true;
+              # NOTE setting to true will create an unrecognized path for binaries for emacs
+              useUserPackages = false;
               users.matthias = import ./home/home.nix;
             };
             users.users.matthias.home = "/Users/matthias";
