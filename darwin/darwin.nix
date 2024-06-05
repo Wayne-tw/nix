@@ -78,12 +78,13 @@
     enable = true;
     global.autoUpdate = true;
 
-    taps = [
-      "gjbae1212/gossm"
-    ];
+    # TODO probably have to be managed via nix-homebrew
+    #taps = [
+    #  "gjbae1212/gossm"
+    #];
 
     brews = [
-      "gossm"
+      # TODO "gossm"
       # Make vterm work on emacs
       #      https://docs.doomemacs.org/v21.12/modules/term/vterm/
       "libvterm" # doomemacs vterm requirement
