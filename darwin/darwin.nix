@@ -79,6 +79,9 @@
 
     brews = [
       "gossm"
+      # Make vterm work on emacs
+      #      https://docs.doomemacs.org/v21.12/modules/term/vterm/
+      "libvterm" # doomemacs vterm requirement
     ];
 
     casks = [

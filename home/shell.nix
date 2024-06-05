@@ -8,6 +8,8 @@
       cat = "bat";
       # replace cd
       cd = "z";
+      # HACK Trying to compile vterm for emacs
+      glibtool = "libtool";
     };
   };
 

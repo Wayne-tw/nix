@@ -7,6 +7,15 @@
   programs.emacs = {
       enable = true;
   };
+  # NOTE vterm support requires compilation
+  # requires: libtool, brew:libvterm
+  # command for compilation:
+  # . Ensure existing alias of `glibtool` to `libtool` (part of shell.nix already)
+  # . Find path of the emacs module -> run vterm failing compilation within emacs
+  # . Compile outside of emacs in the terminal with the <emacs-vterm>/build folder
+  # . `cmake -DLIBVTERM_INCLUDE_DIR=/opt/homebrew/Cellar/libvterm/0.3.3/include -DLIBVTERM_LIBRARY=/opt/homebrew/Cellar/libvterm/0.3.3/lib/libvterm.0.dylib ..`
+  # . `make`
+  # SEE: cmake configuration parameters: https://github.com/akermu/emacs-libvterm/blob/master/CMakeLists.txt
 
   # Doomemacs
   # https://github.com/hlissner/dotfiles/blob/master/modules/editors/emacs.nix
@@ -26,7 +35,8 @@
       emacs-all-the-icons-fonts
       # to build vterm
       cmake
-      libtool
+      libtool # missing alias to glibtool need for vterm compilation
+      #libvterm # not supported on darwin
   ];
   # TODO .Doomemacs Installation
   
