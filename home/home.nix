@@ -42,7 +42,8 @@
     };
 
     shellAliases = {
-      "rebuild" = "darwin-rebuild switch --flake ~/projects/config/dotfiles-slim --refresh";
+      "sys-rebuild" = "darwin-rebuild switch --flake ~/projects/config/dotfiles-slim --refresh";
+      "sys-update" = "cd ~/projects/config/dotfiles-slim && nix flake update && darwin-rebuild switch --flake . --refresh";
     };
 
     # Neo2 Configuration via Karabiner Elements
