@@ -43,7 +43,9 @@
 
     shellAliases = {
       "sys-rebuild" = "darwin-rebuild switch --flake ~/projects/config/dotfiles-slim --refresh";
+      "sys-rollback" = "darwin-rebuild switch --rollback";
       "sys-update" = "cd ~/projects/config/dotfiles-slim && nix flake update && darwin-rebuild switch --flake . --refresh";
+      "sys-optimise" = "nix-store --optimise";
     };
 
     # Neo2 Configuration via Karabiner Elements
