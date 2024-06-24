@@ -37,6 +37,21 @@
       cmake
       libtool # missing alias to glibtool need for vterm compilation
       #libvterm # not supported on darwin
+      # flyspell
+      ispell
+      # :lang markdown
+      # https://docs.doomemacs.org/latest/modules/lang/markdown/
+      # grip # NOTE Not available for darwin -> brew
+      # :lang nix
+      # nixfmt - package relabeling ongoing (2024-06-24)
+      nixfmt-rfc-style
+      # :lang sh
+      shfmt
+      shellcheck
+      # :emacs dired
+      #ls
+      # :completion vertico
+      #grep # with PCRE lookaheads
   ];
   # TODO .Doomemacs Installation
   
