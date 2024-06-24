@@ -68,8 +68,9 @@
   # Storage optimisation
   # https://nixos.wiki/wiki/Storage_optimization
   # TODO should be os independent
+  # NOTE disabled because of issue: https://github.com/NixOS/nix/issues/7273
   nix.extraOptions = ''
-    auto-optimise-store = true
+    auto-optimise-store = false
   '';
 
   homebrew = {
