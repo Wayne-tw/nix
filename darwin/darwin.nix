@@ -113,6 +113,8 @@
       "microsoft-teams"
       # TODO separate private stuff
       "orcaslicer"
+      # needed for colima
+      "docker"
     ];
 
     masApps = {
