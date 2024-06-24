@@ -111,8 +111,10 @@
       "logseq"
       "mattermost"
       "microsoft-teams"
-      # TODO separate private stuff
+      # TODO separate personal stuff
       "orcaslicer"
+      "raspberry-pi-imager"
+      # TODO separate into work stuff, use nixpkgs
       # needed for colima
       "docker"
     ];

@@ -24,6 +24,7 @@
       marksman
       nixd
       ripgrep
+      tree
       # Base tooling
       drawio
     ];
