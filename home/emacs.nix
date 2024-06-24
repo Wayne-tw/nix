@@ -6,6 +6,9 @@
   # https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#nixos
   programs.emacs = {
       enable = true;
+      # example setting emacs binary: package = pkgs.emacs28NativeComp;
+      # TODO Check if needed
+      extraPackages = epkgs: [ epkgs.vterm ];
   };
   # NOTE vterm support requires compilation
   # requires: libtool, brew:libvterm
@@ -62,6 +65,9 @@
   #  recursive = true;
   #  # TODO onChange = readFile path/to/reload;
   #};
+  # TODO Try
+  #   # Doom private config
+  # xdg.configFile."doom".source = ./doom; TODO Reference repository
 
   programs.zsh.initExtra = ''
     # TODO Check if doomemacs already provides this functionality somehow, via :os tty
