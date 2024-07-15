@@ -117,6 +117,8 @@
       # TODO separate into work stuff, use nixpkgs
       # needed for colima
       "docker"
+      # TODO Migrate to knowledge management
+      "obsidian"
     ];
 
     masApps = {
