@@ -39,8 +39,7 @@
     #  };
     #};
 
-    sessionVariables = {
-    };
+    sessionVariables = { };
 
     shellAliases = {
       "sys-rebuild" = "darwin-rebuild switch --flake ~/projects/config/dotfiles-slim --refresh";

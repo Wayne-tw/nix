@@ -3,10 +3,7 @@
 {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages =
-    [
-      pkgs.home-manager
-    ];
+  environment.systemPackages = [ pkgs.home-manager ];
 
   # Use a custom configuration.nix location.
   # TODO keep the default location to support use of `topgrade`
@@ -19,14 +16,17 @@
   nix = {
     package = pkgs.nix;
     settings = {
-      "extra-experimental-features" = [ "nix-command" "flakes" ];
+      "extra-experimental-features" = [
+        "nix-command"
+        "flakes"
+      ];
     };
   };
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   programs = {
     gnupg.agent.enable = true;
-    zsh.enable = true;  # default shell on catalina
+    zsh.enable = true; # default shell on catalina
   };
 
   # Used for backwards compatibility, please read the changelog before changing.
@@ -44,12 +44,12 @@
       config = {
         layout = "float";
         mouse_modifier = "ctrl";
-        mouse_action1  = "resize";
+        mouse_action1 = "resize";
         mouse_drop_action = "stack";
-        window_gap     = "20";
-        window_border  = "off";
+        window_gap = "20";
+        window_border = "off";
         window_opacity = "off";
-        window_shadow  = "off";
+        window_shadow = "off";
       };
       extraConfig = ''
         yabai -m rule --add app='Spotify' display=east
@@ -59,8 +59,8 @@
     };
   };
 
-    # TODO Understand if there is potential to overwrite - since assignment is used
-    # FIXME have homebrew bin in shell
+  # TODO Understand if there is potential to overwrite - since assignment is used
+  # FIXME have homebrew bin in shell
   #programs.zsh.initExtra = ''
   #  export PATH="$\{PATH\}:/opt/homebrew/bin"
   # '';
@@ -154,9 +154,9 @@
   # https://github.com/Cu3PO42/gleaming-glacier/blob/5abb8c0a3fb72cafbc7ca113e5f135142d0b51c8/modules/darwin/neo2/default.nix#L9
   # https://github.com/Cu3PO42/gleaming-glacier/blob/5abb8c0a3fb72cafbc7ca113e5f135142d0b51c8/config/karabiner/LICENSE.md?plain=1
   system.activationScripts.extraActivation.text = ''
-      echo "INFO :: Copying Neo layout into system wide folder"
-      cp ${./neo.icns} "/Library/Keyboard Layouts/neo.icns"
-      cp ${./neo.keylayout} "/Library/Keyboard Layouts/neo.keylayout"
-   '';
+    echo "INFO :: Copying Neo layout into system wide folder"
+    cp ${./neo.icns} "/Library/Keyboard Layouts/neo.icns"
+    cp ${./neo.keylayout} "/Library/Keyboard Layouts/neo.keylayout"
+  '';
 
 }
