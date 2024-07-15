@@ -120,7 +120,10 @@
     ];
 
     masApps = {
-      "Kindle" = 405399194;
+      "1Password for Safari" = 1569813296;
+      "Bandwidth+" = 490461369;
+      "Kindle Classic" = 405399194;
+      "Kindle" = 302584613;
     };
   };
 
