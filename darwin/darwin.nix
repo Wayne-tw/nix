@@ -119,6 +119,8 @@
       "docker"
       # TODO Migrate to knowledge management
       "obsidian"
+      # System cleanup for manual tools
+      "app-cleaner"
     ];
 
     masApps = {
