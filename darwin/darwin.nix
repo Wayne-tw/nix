@@ -98,7 +98,6 @@
       "beeper"
       "disk-inventory-x"
       "notion"
-      "notion-calendar"
       # TODO Migrate to nixpkgs
       "karabiner-elements"
       "raycast"
