@@ -21,6 +21,7 @@ This is to describe the bare-bones development system I use. Supports Intel and 
 - [ ] logseq plugins
 - [ ] restish configuration
 - [ ] import old (before fleek) starship configuration
+- [ ] Support for installing [Insta360 Link Software](https://www.insta360.com/de/download/insta360-link)
 
 ## Install Nix
 
