@@ -119,7 +119,8 @@
       # TODO Migrate to knowledge management
       "obsidian"
       # System cleanup for manual tools
-      "app-cleaner"
+      # NOTE try using nix capabilities as much as possible
+      # "app-cleaner"
     ];
 
     masApps = {
