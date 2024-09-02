@@ -5,6 +5,8 @@
     # The main nixpkgs instance
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+
     # TODO separate homebrew setup and combine with homebrew usage
     # For installing homebrew
     nix-homebrew = {
@@ -22,11 +24,24 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
+    homebrew-sm = {
+      url = "github:clok/sm";
+      flake = false;
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      # optional, not necessary for the module
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # TODO import the 1Password Shell Plugins Flake
+    # _1password-shell-plugins.url = "github:1Password/shell-plugins";
 
     darwin = {
       url = "github:LnL7/nix-darwin";
@@ -38,13 +53,16 @@
 
   outputs = {
     self,
+    nixpkgs-stable,
     darwin,
+    sops-nix,
     flake-utils,
     home-manager,
     nix-homebrew,
     homebrew-core,
     homebrew-cask,
     homebrew-bundle,
+    homebrew-sm,
     ...
   } @ inputs: let
     nixpkgsConfig = {
@@ -56,6 +74,12 @@
         system = "aarch64-darwin";
         modules = [
           ./darwin/darwin.nix
+
+          # FIXME Not working missing OpenSSH enable - Encryption
+          #sops-nix.nixosModules.sops
+          # FIXME Not working when installing stuff via home-manager - should I? Template flakes are not using home-manager either
+          # ./secrets/encryption.nix
+
           home-manager.darwinModules.home-manager
           {
             nixpkgs = nixpkgsConfig;
@@ -85,6 +109,7 @@
                 "homebrew/homebrew-core" = homebrew-core;
                 "homebrew/homebrew-cask" = homebrew-cask;
                 "homebrew/homebrew-bundle" = homebrew-bundle;
+                "clok/sm" = homebrew-sm;
               };
               mutableTaps = false;
             };
