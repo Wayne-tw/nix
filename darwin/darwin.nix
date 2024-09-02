@@ -126,6 +126,7 @@
       "Bandwidth+" = 490461369;
       "Kindle Classic" = 405399194;
       "Kindle" = 302584613;
+      "Meeter" = 1510445899;
     };
   };
 
