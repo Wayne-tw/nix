@@ -3,7 +3,31 @@
 {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = [ pkgs.home-manager ];
+  environment.systemPackages = with pkgs; [
+    home-manager
+    ollama
+  ];
+
+  # Get ollama launched
+  # https://www.danielcorin.com/til/nix-darwin/launch-agents/
+  # TODO Move to kb.nix or consider connection if os independency should be achieved
+  # Creates a plist file at `~/Library/LaunchAgents``
+  # State: `launchctl blame gui/501/org.nixos.ollama-serve`
+  launchd = {
+    user = {
+      agents = {
+        ollama-serve = {
+          command = "${pkgs.ollama}/bin/ollama serve";
+          serviceConfig = {
+            KeepAlive = true;
+            RunAtLoad = true;
+            StandardOutPath = "/tmp/ollama.out.log";
+            StandardErrorPath = "/tmp/ollama.err.log";
+          };
+        };
+      };
+    };
+  };
 
   # Use a custom configuration.nix location.
   # TODO keep the default location to support use of `topgrade`

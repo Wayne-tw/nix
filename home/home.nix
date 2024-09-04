@@ -9,6 +9,7 @@
     ./emacs.nix
     ./music.nix
     ./work.nix
+    ./kb.nix
     # project specific
     ./p1.nix
   ];
