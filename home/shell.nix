@@ -20,7 +20,6 @@
     "$HOME/go/bin" # go
   ];
 
-
   programs = {
     # Helper
     # .Replacement for 'ls'
@@ -30,7 +29,7 @@
       enableZshIntegration = true;
       extraOptions = [
         "--group-directories-first"
-       "--header"
+        "--header"
       ];
     };
     # .Replacement for 'cat'
@@ -51,7 +50,7 @@
       enable = true;
 
       settings = {
-        command_timeout = 100;
+        command_timeout = 200;
         format = "[$all](dimmed white)";
 
         character = {
@@ -140,6 +139,57 @@
       apie = "restish tse";
       apil = "restish tsl";
     };
+
+    # TODO Move to emacs.nix
+    # Emacs vterm helper
+    # https://github.com/akermu/emacs-libvterm?tab=readme-ov-file#shell-side-configuration
+    zsh.initExtra = ''
+      vterm_printf() {
+        if [ -n "$TMUX" ] && ([ "''${TERM%%-*}" = "tmux" ] || [ "''${TERM%%-*}" = "screen" ]); then
+           # Tell tmux to pass the escape sequences through
+           printf "\ePtmux;\e\e]%s\007\e\\" "$1"
+        elif [ "''${TERM%%-*}" = "screen" ]; then
+           # GNU screen (screen, screen-256color, screen-256color-bce)
+           printf "\eP\e]%s\007\e\\" "$1"
+        else
+          printf "\e]%s\e\\" "$1"
+        fi
+      }
+
+      vterm_prompt_end() {
+        vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
+      }
+      setopt PROMPT_SUBST
+      PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+
+      vterm_cmd() {
+        local vterm_elisp
+        vterm_elisp=""
+        while [ $# -gt 0 ]; do
+           vterm_elisp="$vterm_elisp""$(printf '"%s" ' "$(printf "%s" "$1" | sed -e 's|\\|\\\\|g' -e 's|"|\\"|g')")"
+           shift
+        done
+        vterm_printf "51;E$vterm_elisp"
+      }
+
+      find_file() {
+         vterm_cmd find-file "$(realpath "''${@:-.}")"
+      }
+
+      say() {
+         vterm_cmd message "%s" "$*"
+      }
+    '';
+
+    # TODO https://developer.1password.com/docs/cli/shell-plugins/nix/
+    #imports = [ inputs._1password-shell-plugins.hmModules.default ];
+    #programs._1password-shell-plugins = {
+    #  # enable 1Password shell plugins for bash, zsh, and fish shell
+    #  enable = true;
+    #  # the specified packages as well as 1Password CLI will be
+    #  # automatically installed and configured to use shell plugins
+    #  plugins = with pkgs; [ gh awscli2 cachix ];
+    #};
 
     # TODO Check if needed
     bash.enable = true;
