@@ -51,6 +51,10 @@
     };
   };
 
+  # TODO Move to emacs or shell since it is connected to direnv
+  # https://docs.doomemacs.org/v21.12/modules/tools/direnv/
+  services.lorri.enable = true;
+
   # Create /etc/zshrc that loads the nix-darwin environment.
   programs = {
     gnupg.agent.enable = true;
