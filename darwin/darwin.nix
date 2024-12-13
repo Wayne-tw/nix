@@ -125,7 +125,7 @@
     ];
 
     casks = [
-      # TODO Migrate to nixpkgs _1password-gui, _1password (cli)
+      # TODO Migrate to nixpkgs _1password-gui when package is not broken anymore
       "1password"
       "beeper"
       "disk-inventory-x"
@@ -148,7 +148,7 @@
       # TODO separate into work stuff, use nixpkgs
       # needed for colima
       "docker"
-      # TODO Migrate to knowledge management
+      # TODO Migrate to knowledge management: kb.nix
       "obsidian"
       # System cleanup for manual tools
       # NOTE try using nix capabilities as much as possible

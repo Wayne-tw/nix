@@ -23,5 +23,14 @@
   # - gemma2
   # Emacs - Might need to be setup in emacs.nix
   # - zephyr
+  #
+
+  # FIXME not working, missing homebrew context
+  #homebrew = {
+  #  casks = [
+  #    "obsidian"
+  #    "msty"
+  #  ];
+  #};
 
 }
