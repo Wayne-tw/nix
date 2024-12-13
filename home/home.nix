@@ -10,6 +10,7 @@
     ./music.nix
     ./work.nix
     ./kb.nix
+    ./secretmanagement.nix
     # project specific
     ./p1.nix
   ];
