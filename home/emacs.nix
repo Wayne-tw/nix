@@ -6,12 +6,14 @@
 }:
 {
   # Emacs
+  # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.emacs.enable
   # https://github.com/nix-community/home-manager/blob/master/modules/programs/emacs.nix
   # https://github.com/nix-community/emacs-overlay
   # https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#nixos
   programs.emacs = {
     enable = true;
-    # example setting emacs binary: package = pkgs.emacs28NativeComp;
+    # setting emacs specific binary
+    package = pkgs.emacs30;
     # TODO Check if needed
     extraPackages = epkgs: [ epkgs.vterm ];
   };
