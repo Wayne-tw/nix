@@ -41,7 +41,10 @@
     #  };
     #};
 
-    sessionVariables = { };
+    sessionVariables = {
+      # TODO Set this as part of the emacs.nix
+      EDITOR = "emacs";
+    };
 
     shellAliases = {
       "sys-rebuild" = "darwin-rebuild switch --flake ~/projects/config/dotfiles-slim --refresh";
