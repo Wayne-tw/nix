@@ -44,6 +44,10 @@
         "nix-command"
         "flakes"
       ];
+      "trusted-users" = [
+        # FIXME make dependent to the user name configuration - do not hard-code
+        "matthias"
+      ];
     };
   };
 
