@@ -54,7 +54,7 @@
       enable = true;
 
       settings = {
-        command_timeout = 200;
+        command_timeout = 800;
         format = "[$all](dimmed white)";
 
         character = {
