@@ -71,6 +71,22 @@
   ];
 
   services = {
+
+    # https://felixkratz.github.io/SketchyBar/
+    # https://mynixos.com/nix-darwin/options/services.sketchybar
+    sketchybar = {
+      enable = true;
+      # https://mynixos.com/nix-darwin/option/services.sketchybar.config
+      config = ''
+        sketchybar --bar height=24
+        sketchybar --update
+        echo "sketchybar configuration loaded.."
+      '';
+      extraPackages = [
+        pkgs.jq
+        pkgs.lua
+      ];
+    };
     yabai = {
       enable = true;
       config = {
@@ -82,6 +98,9 @@
         window_border = "off";
         window_opacity = "off";
         window_shadow = "off";
+        # sketchybar awarness
+        # 24: height of sketchybar
+        external_bar = "all:24:0";
       };
       extraConfig = ''
         yabai -m rule --add app='Spotify' display=east
