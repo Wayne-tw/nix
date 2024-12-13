@@ -153,6 +153,10 @@
       # System cleanup for manual tools
       # NOTE try using nix capabilities as much as possible
       # "app-cleaner"
+      # AI
+      # https://msty.app
+      # TODO Migrate to knowledge management: kb.nix
+      "msty"
     ];
 
     masApps = {
