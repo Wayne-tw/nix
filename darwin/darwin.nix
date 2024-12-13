@@ -71,6 +71,10 @@
   ];
 
   services = {
+    # FIXME not working
+    #karabiner-elements = {
+    #  enable = true;
+    #};
 
     # https://felixkratz.github.io/SketchyBar/
     # https://mynixos.com/nix-darwin/options/services.sketchybar
