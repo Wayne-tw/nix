@@ -8,6 +8,7 @@
 {
   home.packages = with pkgs; [
     _1password-cli
-    _1password-gui
+    # TODO marked as broken
+    # _1password-gui
   ];
 }
