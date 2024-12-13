@@ -49,7 +49,8 @@
     # icons for the themes
     # TODO understand if all-the-icons is obsolete
     emacs-all-the-icons-fonts
-    nerdfonts
+    # TODO move font configuration outside, since there are now many
+    nerd-fonts.fira-code
     # to build vterm
     cmake
     libtool # missing alias to glibtool need for vterm compilation
