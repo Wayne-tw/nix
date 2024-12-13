@@ -7,6 +7,7 @@
     ./direnv.nix
     ./git.nix
     ./emacs.nix
+    ./editor.nix
     ./music.nix
     ./work.nix
     ./kb.nix
