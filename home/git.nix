@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
   home.file = {
     ".cvsignore".source = ../config/git/.cvsignore;
@@ -14,11 +14,12 @@
   # TODO decide on usage
   # git alternative
   programs.jujutsu = {
-      enable = true;
+    enable = true;
   };
 
   # Manage multiple git repositories
   home.packages = with pkgs; [
     mani
+    pre-commit
   ];
 }
