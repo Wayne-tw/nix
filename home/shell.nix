@@ -13,6 +13,10 @@
     };
   };
 
+  home.packages = with pkgs; [
+    warp-terminal
+  ];
+
   # NOTE Not set when a new zsh shell is opened without logout/login as user
   home.sessionPath = [
     # FIXME set the path when respective application gets installed
