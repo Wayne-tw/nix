@@ -70,6 +70,8 @@
     #ls
     # :completion vertico
     #grep # with PCRE lookaheads
+    # difftastic
+    difftastic
   ];
   # TODO .Doomemacs Installation
 
