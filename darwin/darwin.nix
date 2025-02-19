@@ -190,6 +190,10 @@
     };
   };
 
+  # Enable sudo authentication with Touch ID.
+  # https://daiderd.com/nix-darwin/manual/index.html#opt-security.pam.enableSudoTouchIdAuth
+  security.pam.enableSudoTouchIdAuth = true;
+
   system.defaults = {
     dock = {
       autohide = true;
