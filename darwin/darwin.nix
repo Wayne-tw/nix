@@ -165,7 +165,8 @@
       # TODO how to install the plugins for logseq?
       "logseq"
       "mattermost"
-      "microsoft-teams"
+      # TODO Check if it can be replaced with the nixpkgs
+      #"microsoft-teams"
       # TODO separate personal stuff
       "orcaslicer"
       "raspberry-pi-imager"

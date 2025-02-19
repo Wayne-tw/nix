@@ -8,8 +8,8 @@
 {
   home.packages = with pkgs; [
     # TODO Find a way to manage these "globally" but outside of dotfiles-slim repository.
-    # MS Teams
-    teams
+    # NOTE MS Teams nixpkgs outdated and broken -> use brew
+    #teams
     # Slack
     slack
     # VPN client
