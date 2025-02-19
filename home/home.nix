@@ -4,6 +4,8 @@
   imports = [
     ./shell.nix
     ./wezterm.nix
+    # Consider group dev related files, e.g. dev, direnv, git, emacs, editor
+    ./dev.nix
     ./direnv.nix
     ./git.nix
     ./emacs.nix
