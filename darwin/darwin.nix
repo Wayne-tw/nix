@@ -197,6 +197,9 @@
       show-process-indicators = false;
       show-recents = false;
       static-only = true;
+      # Disable automatically rearrange spaces based on most recent use
+      # https://daiderd.com/nix-darwin/manual/index.html#opt-system.defaults.dock.mru-spaces
+      mru-spaces = false;
     };
     finder = {
       AppleShowAllExtensions = true;
