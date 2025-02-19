@@ -105,9 +105,12 @@
 
     # ZSH
     zsh.enable = true;
+    # TODO move terraform configuration into the related template flake
+    # TODO move docker configuration into the related template flake - if possible
     # Configure colima
     zsh.envExtra = ''
       export DOCKER_HOST=unix://$HOME/.colima/docker.sock
+      export TF_PLUGIN_CACHE_DIR=$HOME/.terraform.d/plugin-cache
     '';
 
     zsh.profileExtra = ''
