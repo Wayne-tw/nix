@@ -146,6 +146,8 @@
       # Make vterm work on emacs
       #      https://docs.doomemacs.org/v21.12/modules/term/vterm/
       "libvterm" # doomemacs vterm requirement
+      # TODO Migrate to package management once the package is fixed
+      "choose-gui"
     ];
 
     casks = [
@@ -182,6 +184,8 @@
       # https://msty.app
       # TODO Migrate to knowledge management: kb.nix
       "msty"
+      # TODO try to get skhd working
+      "icanhazshortcut"
     ];
 
     masApps = {

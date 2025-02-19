@@ -31,6 +31,12 @@
       tree
       # Base tooling
       drawio
+      # Support to switch windows instead of apps
+      # NOTE 'alt-tab-macos' not working to show multiple vivaldi windows - one of my use cases
+      # TODO not working using brew instead
+      # choose-gui
+      # TODO Move to macosx specific ui section
+      hidden-bar
     ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
