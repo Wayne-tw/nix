@@ -138,7 +138,9 @@
     #];
 
     brews = [
-      # TODO "gossm"
+      # TODO find a way to install packages using go get - reduce brew usage
+      "sm"
+      "gossm"
       # Emacs support :lang markdown
       "grip"
       # Make vterm work on emacs

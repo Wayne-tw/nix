@@ -25,7 +25,11 @@
       flake = false;
     };
     homebrew-sm = {
-      url = "github:clok/sm";
+      url = "github:clok/homebrew-sm";
+      flake = false;
+    };
+    homebrew-gossm = {
+      url = "github:gjbae1212/homebrew-gossm";
       flake = false;
     };
 
@@ -64,6 +68,7 @@
       homebrew-cask,
       homebrew-bundle,
       homebrew-sm,
+      homebrew-gossm,
       ...
     }@inputs:
     let
@@ -112,7 +117,8 @@
                   "homebrew/homebrew-core" = homebrew-core;
                   "homebrew/homebrew-cask" = homebrew-cask;
                   "homebrew/homebrew-bundle" = homebrew-bundle;
-                  "clok/sm" = homebrew-sm;
+                  "clok/homebrew-sm" = homebrew-sm;
+                  "gjbae1212/homebrew-gossm" = homebrew-gossm;
                 };
                 mutableTaps = false;
               };
