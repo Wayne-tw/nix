@@ -201,8 +201,8 @@
   };
 
   # Enable sudo authentication with Touch ID.
-  # https://daiderd.com/nix-darwin/manual/index.html#opt-security.pam.enableSudoTouchIdAuth
-  security.pam.enableSudoTouchIdAuth = true;
+  # https://daiderd.com/nix-darwin/manual/index.html#opt-security.pam.services.sudo_local.enable
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   system.defaults = {
     dock = {
