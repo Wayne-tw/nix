@@ -151,6 +151,8 @@
       "libvterm" # doomemacs vterm requirement
       # TODO Migrate to package management once the package is fixed
       "choose-gui"
+      # TODO move into a template/aws fake - but curently no package
+      "awslim"
     ];
 
     casks = [

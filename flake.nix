@@ -32,6 +32,10 @@
       url = "github:gjbae1212/homebrew-gossm";
       flake = false;
     };
+    homebrew-awslim = {
+      url = "github:fujiwara/homebrew-tap";
+      flake = false;
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -69,6 +73,7 @@
       homebrew-bundle,
       homebrew-sm,
       homebrew-gossm,
+      homebrew-awslim,
       ...
     }@inputs:
     let
@@ -119,6 +124,7 @@
                   "homebrew/homebrew-bundle" = homebrew-bundle;
                   "clok/homebrew-sm" = homebrew-sm;
                   "gjbae1212/homebrew-gossm" = homebrew-gossm;
+                  "fujiwara/homebrew-tap" = homebrew-awslim;
                 };
                 mutableTaps = false;
               };
