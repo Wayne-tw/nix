@@ -23,6 +23,9 @@
             RunAtLoad = true;
             StandardOutPath = "/tmp/ollama.out.log";
             StandardErrorPath = "/tmp/ollama.err.log";
+            EnvironmentVariables = {
+              OLLAMA_ORIGINS = "moz-extension://*,chrome-extension://*,safari-web-extension://*";
+            };
           };
         };
       };
