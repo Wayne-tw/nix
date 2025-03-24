@@ -17,7 +17,7 @@
     # TODO Check if needed
     extraPackages = epkgs: [ epkgs.vterm ];
   };
-  # NOTE vterm support requires compilation
+  # NOThttps://github.com/ljos/jq-modeEvscode-langservers-extracted vterm support requires compilation
   # requires: libtool, brew:libvterm
   # command for compilation:
   # . Ensure existing alias of `glibtool` to `libtool` (part of shell.nix already)
@@ -66,12 +66,26 @@
     # :lang sh
     shfmt
     shellcheck
+    bash-language-server
     # :emacs dired
     #ls
     # :completion vertico
     #grep # with PCRE lookaheads
     # difftastic
     difftastic
+    # json
+    vscode-langservers-extracted
+    # compress undo history
+    # https://docs.doomemacs.org/v21.12/modules/emacs/undo/
+    zstd
+    # markdown preview
+    pandoc
+    # Detect fonts
+    fontconfig
+    # Dired features
+    poppler
+    # Samba Share Connect Support
+    samba
   ];
   # TODO .Doomemacs Installation
 
