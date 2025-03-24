@@ -31,6 +31,13 @@ in
     #pkgs_obsidian_1_8_7.obsidian
     # NOTE service execution is os dependent, hence a piece is in darwin.nix
     pkgs.ollama
+    # Knowledge management via LSP
+    # https://oxide.md/Home
+    pkgs.markdown-oxide
+    # Markdown support
+
+    # Render mermaid diagrams, provides mmdc
+    pkgs.mermaid-cli
   ];
 
   # TODO Install some models

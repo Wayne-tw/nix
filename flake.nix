@@ -20,10 +20,6 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
-    homebrew-bundle = {
-      url = "github:homebrew/homebrew-bundle";
-      flake = false;
-    };
     homebrew-sm = {
       url = "github:clok/homebrew-sm";
       flake = false;
@@ -70,7 +66,6 @@
       nix-homebrew,
       homebrew-core,
       homebrew-cask,
-      homebrew-bundle,
       homebrew-sm,
       homebrew-gossm,
       homebrew-awslim,
@@ -121,7 +116,6 @@
                 taps = {
                   "homebrew/homebrew-core" = homebrew-core;
                   "homebrew/homebrew-cask" = homebrew-cask;
-                  "homebrew/homebrew-bundle" = homebrew-bundle;
                   "clok/homebrew-sm" = homebrew-sm;
                   "gjbae1212/homebrew-gossm" = homebrew-gossm;
                   "fujiwara/homebrew-tap" = homebrew-awslim;
