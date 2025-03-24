@@ -173,6 +173,9 @@
       "choose-gui"
       # TODO move into a template/aws fake - but curently no package
       "awslim"
+      # emacs 29
+      # FIXME find out how to install with parameters
+      #"emacs-mac --with-modules --with-xwidgets"
     ];
 
     casks = [
