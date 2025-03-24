@@ -139,6 +139,13 @@
     enable = true;
     global.autoUpdate = true;
 
+    # SEE: https://daiderd.com/nix-darwin/manual/index.html#opt-homebrew.onActivation
+    onActivation = {
+      autoUpdate = true;
+      cleanup = "zap";
+      upgrade = true;
+    };
+
     # TODO probably have to be managed via nix-homebrew
     #taps = [
     #  "gjbae1212/gossm"
