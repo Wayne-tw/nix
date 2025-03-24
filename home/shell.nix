@@ -117,7 +117,26 @@
       [ -r ~/.nix-profile/etc/profile.d/nix.sh ] && source  ~/.nix-profile/etc/profile.d/nix.sh
       export XCURSOR_PATH=$XCURSOR_PATH:/usr/share/icons:~/.local/share/icons:~/.icons:~/.nix-profile/share/icons
     '';
+
+    zsh.autosuggestion = {
+      enable = true;
+      strategy = [
+        "match_prev_cmd"
+        "completion"
+      ];
+    };
+
     zsh.enableCompletion = true;
+
+    zsh.antidote = {
+      enable = true;
+      useFriendlyNames = true;
+      plugins = [
+        # Completion
+        # run towards the TOP of your .zsh_plugins.txt before any compdef calls
+        "mattmc3/ez-compinit"
+      ];
+    };
 
     # Define shell aliases
     # TODO Think about how to make dependent on actual use
@@ -141,15 +160,19 @@
       tmaa = "terramate run -- terraform apply -auto-approve";
       tmclone = "terramate experimental clone";
       # Project dependent
-      apip = "restish tsp";
-      apis = "restish tss";
-      apie = "restish tse";
-      apil = "restish tsl";
+      #apip = "restish tsp";
+      #apis = "restish tss";
+      #apie = "restish tse";
+      #apil = "restish tsl";
     };
+
+    # let the terminal track the current working directory
+    zsh.enableVteIntegration = true;
 
     # TODO Move to emacs.nix
     # Emacs vterm helper
     # https://github.com/akermu/emacs-libvterm?tab=readme-ov-file#shell-side-configuration
+    # TODO check if vterm configuration is still needed with enabling VteIntegration = true above
     zsh.initExtra = ''
       vterm_printf() {
         if [ -n "$TMUX" ] && ([ "''${TERM%%-*}" = "tmux" ] || [ "''${TERM%%-*}" = "screen" ]); then
