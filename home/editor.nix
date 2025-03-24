@@ -3,8 +3,7 @@
 {
 
   home.packages = with pkgs; [
-    # FIXME unsupported architecture and os - only x86 + linux
-    # code-cursor
+    code-cursor
   ];
 
   # TODO Version 0.158.2 marked as broken -> latest 0.164.2
