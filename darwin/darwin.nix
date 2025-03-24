@@ -171,7 +171,6 @@
       "1password"
       "beeper"
       "disk-inventory-x"
-      "notion"
       # TODO Migrate to nixpkgs
       "karabiner-elements"
       "raycast"
@@ -179,17 +178,18 @@
       "wezterm"
       "vivaldi"
       # aws specific tooling - currently unsupported package
+      # TODO Migrate to knowledge management: kb.nix
       # TODO Migrate to engagement specific stuff
       # TODO how to install the plugins for logseq?
-      "logseq"
       "mattermost"
+      #"logseq"
+      "obsidian"
+      "notion"
       # TODO Check if it can be replaced with the nixpkgs
       #"microsoft-teams"
       # TODO separate personal stuff
       "orcaslicer"
       "raspberry-pi-imager"
-      # TODO Migrate to knowledge management: kb.nix
-      "obsidian"
       # System cleanup for manual tools
       # NOTE try using nix capabilities as much as possible
       # "app-cleaner"
