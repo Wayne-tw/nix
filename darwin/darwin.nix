@@ -75,6 +75,10 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 
+  # TODO Make customized screenshot shortcut declarative
+  # - default to clipboard instead to file
+  # -> https://www.reddit.com/r/NixOS/comments/17n3tcn/setting_keyboard_shortcuts_in_nix_darwin/
+
   fonts.packages = [
     pkgs.atkinson-hyperlegible
     pkgs.jetbrains-mono
@@ -101,6 +105,7 @@
         pkgs.lua
       ];
     };
+    # Window Manager
     yabai = {
       enable = true;
       config = {

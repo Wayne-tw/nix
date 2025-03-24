@@ -22,6 +22,7 @@ This is to describe the bare-bones development system I use. Supports Intel and 
 - [ ] restish configuration
 - [ ] import old (before fleek) starship configuration
 - [ ] Support for installing [Insta360 Link Software](https://www.insta360.com/de/download/insta360-link)
+- [x] Support installing none packaged applications via `go install -> e.g. check templates -> k8s`
 
 ## Install Nix
 
