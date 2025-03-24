@@ -177,9 +177,6 @@
       # TODO separate personal stuff
       "orcaslicer"
       "raspberry-pi-imager"
-      # TODO separate into work stuff, use nixpkgs
-      # needed for colima
-      "docker"
       # TODO Migrate to knowledge management: kb.nix
       "obsidian"
       # System cleanup for manual tools
