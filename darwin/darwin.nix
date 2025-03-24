@@ -5,7 +5,11 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     home-manager
+    # Local LLMs
     ollama
+    # System Status
+    # TODO export configuration and add to this repository - including restore
+    stats
   ];
 
   # Get ollama launched
