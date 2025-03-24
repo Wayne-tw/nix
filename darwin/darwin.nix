@@ -1,4 +1,8 @@
-{ config, pkgs, ... }:
+{
+  # unused: config,
+  pkgs,
+  ...
+}:
 
 {
   # List packages installed in system profile. To search by name, run:
