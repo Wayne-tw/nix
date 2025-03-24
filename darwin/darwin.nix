@@ -181,12 +181,13 @@
       # TODO Migrate to knowledge management: kb.nix
       # TODO Migrate to engagement specific stuff
       # TODO how to install the plugins for logseq?
-      "mattermost"
       #"logseq"
       "obsidian"
       "notion"
+      # TODO move to project specific tools
+      #"mattermost"
       # TODO Check if it can be replaced with the nixpkgs
-      #"microsoft-teams"
+      "microsoft-teams"
       # TODO separate personal stuff
       "orcaslicer"
       "raspberry-pi-imager"
