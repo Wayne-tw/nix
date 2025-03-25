@@ -176,6 +176,8 @@
       # emacs 29
       # FIXME find out how to install with parameters
       #"emacs-mac --with-modules --with-xwidgets"
+      # https://zshdb.readthedocs.io/en/latest/entry-exit.html
+      "zshdb"
     ];
 
     casks = [
