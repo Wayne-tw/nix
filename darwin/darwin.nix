@@ -252,6 +252,9 @@
       AppleKeyboardUIMode = 3;
       "com.apple.keyboard.fnState" = true;
       NSAutomaticWindowAnimationsEnabled = false;
+      # avoid adding a period when pressing space bar two times
+      # https://nix-darwin.github.io/nix-darwin/manual/index.html#opt-system.defaults.NSGlobalDomain.NSAutomaticPeriodSubstitutionEnabled
+      NSAutomaticPeriodSubstitutionEnabled = false;
     };
   };
 
