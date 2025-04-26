@@ -12,6 +12,8 @@
     nix-homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
     };
+    # Homebrew Tap Management
+    # NOTE: https://github.com/zhaofengli/nix-homebrew?tab=readme-ov-file#declarative-taps
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
       flake = false;
