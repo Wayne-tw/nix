@@ -45,6 +45,8 @@
       # choose-gui
       # TODO Move to macosx specific ui section
       hidden-bar
+      # TODO move UI stuff into a separate file
+      xbar
     ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
