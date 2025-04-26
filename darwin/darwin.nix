@@ -125,6 +125,24 @@
         yabai -m rule --add app='Spotify' display=east
 
         yabai -m rule --add app='System Settings' manage=off
+
+        # Space positioning
+        yabai -m rule --add app="^Google Calendar" space=1
+        yabai -m rule --add app="^Obsidian" space=3
+        yabai -m rule --add app="^Vivaldi" space=4
+        yabai -m rule --add app="^Emacs" space=5
+        yabai -m rule --add app="^Slack" space=6
+        yabai -m rule --add app="^Microsoft Teams" space=6
+        yabai -m rule --add app="^Google Chat" space=6
+        yabai -m rule --add app="^Zoom" space=6
+        yabai -m rule --add app="^Kindle" space=7
+        yabai -m rule --add app="^Warp" space=7
+        yabai -m rule --add app="^Msty" space=7
+        yabai -m rule --add app="^Activity Monitor" space=7
+        yabai -m rule --add app="^Notion" space=8
+        yabai -m rule --add app="^Beeper" space=9
+      '';
+    };
       '';
     };
   };
