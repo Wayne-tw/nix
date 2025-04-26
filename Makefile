@@ -8,6 +8,9 @@ info:
 update:
 	nix flake update
 
+setup:
+	nix run nix-darwin -- switch --flake . --refresh
+
 # NOTE it seems nix is not uninstalling brew installed apps, even when done via the flake
 app ?= unset
 uninstall-brew:
