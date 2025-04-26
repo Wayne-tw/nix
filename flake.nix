@@ -85,6 +85,9 @@
       };
     in
     {
+      # NOTE configure automatic backup of existing files
+      home-manager.backupFileExtension = "bak";
+
       darwinConfigurations = {
         "Matthiass-MacBook-Pro" = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
