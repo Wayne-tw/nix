@@ -141,16 +141,44 @@
             inherit inputs;
           };
         };
-        "MacBook-Pro-Home" = darwin.lib.darwinSystem {
+        "MacPro" = darwin.lib.darwinSystem {
           system = "x86_64-darwin";
           modules = [
             ./darwin/darwin.nix
             home-manager.darwinModules.home-manager
             {
+              nixpkgs = nixpkgsConfig;
+
               home-manager = {
-                users.matthias = import ./home/home.nix;
+                # FIXME sync with all macosx configurations
+                useGlobalPkgs = true;
+                # NOTE setting to true will create an unrecognized path for binaries for emacs
+                useUserPackages = false;
+
+                users.mat = import ./home/home.nix;
               };
-              users.users.matthias.home = "/Users/matthias";
+              users.users.mat.home = "/Users/mat";
+            }
+
+            # FIXME move inside ./darwin/darwin.nix file if possible - keep the flake short
+            # TODO Do this for all MacOSX systems NOT only this single one
+            nix-homebrew.darwinModules.nix-homebrew
+            {
+              nix-homebrew = {
+                enable = true;
+                autoMigrate = true;
+                # FIXME use the user name set via darwinConfiguration
+                user = "mat";
+
+                # TODO check if this is necessary
+                taps = {
+                  "homebrew/homebrew-core" = homebrew-core;
+                  "homebrew/homebrew-cask" = homebrew-cask;
+                  "homebrew/homebrew-bundle" = homebrew-bundle;
+                  "clok/homebrew-sm" = homebrew-sm;
+                };
+                mutableTaps = false;
+              };
             }
           ];
           specialArgs = {
