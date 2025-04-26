@@ -143,6 +143,34 @@
         yabai -m rule --add app="^Beeper" space=9
       '';
     };
+    # Keyboard Shortcut Manager
+    skhd = {
+      enable = true;
+      # FIXME use a different path, this is only for testing
+      # FIXME none of the commands are working
+      skhdConfig = ''
+        ctl - k : bash -c "/Users/matthias/projects/config/dotfiles-slim/config/windowswitcher/switch.sh"
+
+        # select window
+        alt + cmd - w: yabai -m query --windows \
+        | jq -r '.[] | "\(.app): \(.title)"' \
+        | /opt/homebrew/bin/choose -u -b fabd2f -c 427b58 -s 14 -n 15 -i "$@" <&0 \
+        | yabai -m query --windows \
+        | jq ".[$idx].id" \
+        | xargs yabai -m window --focus
+
+        # cycle between stacked windows
+        alt + cmd - j : yabai -m query --spaces --space \
+        | jq -re ".index" \
+        | xargs -I{} yabai -m query --windows --space {} \
+        | jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) | . as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $has_index > 0 then nth($has_index - 1).id else nth($array_length - 1).id end' \
+        | xargs -I{} yabai -m window --focus {}
+
+        alt + cmd - k : yabai -m query --spaces --space \
+        | jq -re ".index" \
+        | xargs -I{} yabai -m query --windows --space {} \
+        | jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) | . as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $array_length - 1 > $has_index then nth($has_index + 1).id else nth(0).id end' \
+        | xargs -I{} yabai -m window --focus {}
       '';
     };
   };
