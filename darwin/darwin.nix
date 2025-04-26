@@ -192,7 +192,7 @@
       "karabiner-elements"
       "raycast"
       # TODO Migrate to nixpkgs
-      "wezterm"
+      #"wezterm"
       "vivaldi"
       # aws specific tooling - currently unsupported package
       # TODO Migrate to knowledge management: kb.nix
