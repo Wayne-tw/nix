@@ -105,7 +105,7 @@
   #   # Doom private config
   # xdg.configFile."doom".source = ./doom; TODO Reference repository
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
       # TODO Check if doomemacs already provides this functionality somehow, via :os tty
       # Use vterm provide configuration files to configure integration
       # https://github.com/akermu/emacs-libvterm?tab=readme-ov-file#shell-side-configuration-files

@@ -131,7 +131,7 @@
 
   # TODO Understand if there is potential to overwrite - since assignment is used
   # FIXME have homebrew bin in shell
-  #programs.zsh.initExtra = ''
+  #programs.zsh.initContent = ''
   #  export PATH="$\{PATH\}:/opt/homebrew/bin"
   # '';
 

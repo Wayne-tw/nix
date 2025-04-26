@@ -173,7 +173,7 @@
     # Emacs vterm helper
     # https://github.com/akermu/emacs-libvterm?tab=readme-ov-file#shell-side-configuration
     # TODO check if vterm configuration is still needed with enabling VteIntegration = true above
-    zsh.initExtra = ''
+    zsh.initContent = ''
       vterm_printf() {
         if [ -n "$TMUX" ] && ([ "''${TERM%%-*}" = "tmux" ] || [ "''${TERM%%-*}" = "screen" ]); then
            # Tell tmux to pass the escape sequences through
