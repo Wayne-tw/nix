@@ -178,7 +178,6 @@
                 taps = {
                   "homebrew/homebrew-core" = homebrew-core;
                   "homebrew/homebrew-cask" = homebrew-cask;
-                  "homebrew/homebrew-bundle" = homebrew-bundle;
                   "clok/homebrew-sm" = homebrew-sm;
                 };
                 mutableTaps = false;
