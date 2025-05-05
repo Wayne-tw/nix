@@ -13,12 +13,13 @@
   programs.emacs = {
     enable = true;
     # setting emacs specific binary
-    package = (
-      pkgs.emacs30.override {
-        # unknown: withModules = true;
-        # unsupported for mac: withXwidgets = true;
-      }
-    );
+    #package = (
+    #  # unsecure: pkgs.emacs-macport.override {
+    #  pkgs.emacs30.override {
+    #    # unknown: withModules = true;
+    #    # unsupported for mac: withXwidgets = true;
+    #  }
+    #);
     # TODO Check if needed
     extraPackages = epkgs: [ epkgs.vterm ];
   };
@@ -91,6 +92,10 @@
     poppler
     # Samba Share Connect Support
     samba
+    # Debugger
+    lldb
+    # FIXME debug emacs issue with latest macosx update
+    libgccjit
   ];
   # TODO .Doomemacs Installation
 
