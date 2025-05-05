@@ -1,8 +1,14 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   home.packages = with pkgs; [
-    zoom-us
+    # FIXME not available for darwin anymore
+    #zoom-us
   ];
 
 }

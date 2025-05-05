@@ -263,6 +263,8 @@
       "msty"
       # TODO try to get skhd working
       "icanhazshortcut"
+      # NOTE not available as nixpkgs anymore
+      "zoom"
     ];
 
     masApps = {
