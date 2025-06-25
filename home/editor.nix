@@ -5,11 +5,16 @@
   home.packages = with pkgs; [
     code-cursor
     # VS Code for AI coding agent trials
-    vscode-with-extensions
+    vscode
+    #vscode-with-extensions
     vscode-extensions.continue.continue
     vscode-extensions.hashicorp.hcl
     vscode-extensions.hashicorp.terraform
     vscode-extensions.golang.go
+    # Cline MCP servers prerequisities
+    nodejs
+    # FIXME not working: nodePackages_latest."@modelcontextprotocol/server-filesystem"
+    uv
   ];
 
   # https://github.com/NixOS/nixpkgs/blob/nixpkgs-unstable/pkgs/by-name/ze/zed-editor/package.nix
