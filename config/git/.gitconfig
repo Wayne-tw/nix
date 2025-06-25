@@ -56,14 +56,9 @@
   my-commits = log --author='Matthias Scholz' --author-date-order --date=format:'%a %b %d %r' --format='%h | %ad | %s'
   jump = "!$(brew --prefix git)/share/git-core/contrib/git-jump/git-jump"
 [user]
-  email = matthias.scholz@thoughtworks.com
-  name = Matthias Scholz
+  email = wayne.tan@thoughtworks.com
+  name = Wayne Tan
 [github]
-  user = matthiasscholz
+  user = Wayne-tw
 [hub]
   protocol = ssh
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
