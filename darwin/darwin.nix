@@ -48,6 +48,11 @@
 
   # Auto upgrade nix package and the daemon service.
   nix = {
+    # NOTE using determine to manage the nix installation which handles nix updates with a separate daemon.
+    # SEE https://determinate.systems/posts/changelog-determinate-nix-342/
+    enable = false;
+
+    # TODO understand if this is still needed with using determine installer
     package = pkgs.nix;
     settings = {
       "extra-experimental-features" = [
@@ -63,7 +68,8 @@
 
   # TODO Move to emacs or shell since it is connected to direnv
   # https://docs.doomemacs.org/v21.12/modules/tools/direnv/
-  services.lorri.enable = true;
+  # NOTE disabled since it requires nix.enable
+  # services.lorri.enable = true;
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   programs = {
