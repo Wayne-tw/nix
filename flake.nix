@@ -5,7 +5,7 @@
     # The main nixpkgs instance
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
 
     # TODO separate homebrew setup and combine with homebrew usage
     # For installing homebrew
