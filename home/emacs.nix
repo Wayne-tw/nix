@@ -65,7 +65,7 @@
     ispell
     # :lang markdown
     # https://docs.doomemacs.org/latest/modules/lang/markdown/
-    # grip # NOTE Not available for darwin -> brew
+    go-grip
     # :lang nix
     # nixfmt - package relabeling ongoing (2024-06-24)
     nixfmt-rfc-style

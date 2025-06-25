@@ -216,8 +216,6 @@
       # TODO find a way to install packages using go get - reduce brew usage
       "sm"
       "gossm"
-      # Emacs support :lang markdown
-      "grip"
       # Make vterm work on emacs
       #      https://docs.doomemacs.org/v21.12/modules/term/vterm/
       "libvterm" # doomemacs vterm requirement
