@@ -71,38 +71,6 @@
       };
     };
 
-    # fish
-    # TODO decide on use
-    # fish = {
-    #   enable = true;
-
-    #   interactiveShellInit = ''
-    #     set fish_greeting # N/A
-    #   '';
-
-    #   plugins = [
-    #     {
-    #       # TODO: Remove this
-    #       name = "fish-asdf";
-    #       src = pkgs.fetchFromGitHub {
-    #         owner = "rstacruz";
-    #         repo = "fish-asdf";
-    #         rev = "5869c1b1ecfba63f461abd8f98cb21faf337d004";
-    #         sha256 = "39L6UDslgIEymFsQY8klV/aluU971twRUymzRL17+6c=";
-    #       };
-    #     }
-    #     {
-    #       name = "nix-env";
-    #       src = pkgs.fetchFromGitHub {
-    #         owner = "lilyball";
-    #         repo = "nix-env.fish";
-    #         rev = "7b65bd228429e852c8fdfa07601159130a818cfa";
-    #         hash = "sha256-RG/0rfhgq6aEKNZ0XwIqOaZ6K5S4+/Y5EEMnIdtfPhk=";
-    #       };
-    #     }
-    #   ];
-    # };
-
     # ZSH
     zsh.enable = true;
     # TODO move terraform configuration into the related template flake
@@ -159,67 +127,10 @@
       tma = "terramate run -- terraform apply";
       tmaa = "terramate run -- terraform apply -auto-approve";
       tmclone = "terramate experimental clone";
-      # Project dependent
-      #apip = "restish tsp";
-      #apis = "restish tss";
-      #apie = "restish tse";
-      #apil = "restish tsl";
     };
 
     # let the terminal track the current working directory
     zsh.enableVteIntegration = true;
-
-    # TODO Move to emacs.nix
-    # Emacs vterm helper
-    # https://github.com/akermu/emacs-libvterm?tab=readme-ov-file#shell-side-configuration
-    # TODO check if vterm configuration is still needed with enabling VteIntegration = true above
-    zsh.initContent = ''
-      vterm_printf() {
-        if [ -n "$TMUX" ] && ([ "''${TERM%%-*}" = "tmux" ] || [ "''${TERM%%-*}" = "screen" ]); then
-           # Tell tmux to pass the escape sequences through
-           printf "\ePtmux;\e\e]%s\007\e\\" "$1"
-        elif [ "''${TERM%%-*}" = "screen" ]; then
-           # GNU screen (screen, screen-256color, screen-256color-bce)
-           printf "\eP\e]%s\007\e\\" "$1"
-        else
-          printf "\e]%s\e\\" "$1"
-        fi
-      }
-
-      vterm_prompt_end() {
-        vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
-      }
-      setopt PROMPT_SUBST
-      PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
-
-      vterm_cmd() {
-        local vterm_elisp
-        vterm_elisp=""
-        while [ $# -gt 0 ]; do
-           vterm_elisp="$vterm_elisp""$(printf '"%s" ' "$(printf "%s" "$1" | sed -e 's|\\|\\\\|g' -e 's|"|\\"|g')")"
-           shift
-        done
-        vterm_printf "51;E$vterm_elisp"
-      }
-
-      find_file() {
-         vterm_cmd find-file "$(realpath "''${@:-.}")"
-      }
-
-      say() {
-         vterm_cmd message "%s" "$*"
-      }
-    '';
-
-    # TODO https://developer.1password.com/docs/cli/shell-plugins/nix/
-    #imports = [ inputs._1password-shell-plugins.hmModules.default ];
-    #programs._1password-shell-plugins = {
-    #  # enable 1Password shell plugins for bash, zsh, and fish shell
-    #  enable = true;
-    #  # the specified packages as well as 1Password CLI will be
-    #  # automatically installed and configured to use shell plugins
-    #  plugins = with pkgs; [ gh awscli2 cachix ];
-    #};
 
     # TODO Check if needed
     bash.enable = true;
