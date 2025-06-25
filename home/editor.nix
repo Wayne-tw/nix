@@ -17,35 +17,36 @@
   programs.zed-editor = {
     enable = true;
 
-    extensions = [
-      "basher"
-      "dockerfile"
-      "docker-compose"
-      "gemini"
-      "golangci-lint"
-      "gosum"
-      "http"
-      "make"
-      "mermaid"
-      "nix"
-      "rainbow-csv"
-      "rego"
-      "risor"
-      "terraform"
-      "markdown-oxide"
-    ];
+    # FIXME using any of these configuration settings make the activate stuck.
+    # extensions = [
+    #   "basher"
+    #   "dockerfile"
+    #   "docker-compose"
+    #   "gemini"
+    #   "golangci-lint"
+    #   "gosum"
+    #   "http"
+    #   "make"
+    #   "mermaid"
+    #   "nix"
+    #   "rainbow-csv"
+    #   "rego"
+    #   "risor"
+    #   "terraform"
+    #   "markdown-oxide"
+    # ];
 
-    userSettings = {
-      # https://zed.dev/docs/configuring-zed#direnv-integration
-      load_direnv = "direct";
-      autosave = "on_focus_change";
+    #   userSettings = {
+    #     # https://zed.dev/docs/configuring-zed#direnv-integration
+    #     load_direnv = "direct";
+    #     autosave = "on_focus_change";
 
-      assistant = {
-        default_model = {
-          provider = "ollama";
-          model = "qwen2.5-coder";
-        };
-      };
-    };
+    #     agent = {
+    #       default_model = {
+    #         provider = "google.ai";
+    #         model = "gemini-2.5-pro-preview-05-06";
+    #       };
+    #     };
+    #   };
   };
 }
