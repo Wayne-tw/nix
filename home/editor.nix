@@ -11,5 +11,4 @@
     vscode-extensions.hashicorp.terraform
     vscode-extensions.golang.go
   ];
-  };
-}
+  }
