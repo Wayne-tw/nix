@@ -45,9 +45,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # TODO import the 1Password Shell Plugins Flake
-    # _1password-shell-plugins.url = "github:1Password/shell-plugins";
-
     darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -82,16 +79,9 @@
       home-manager.backupFileExtension = "bak";
 
       darwinConfigurations = {
-        "Matthiass-MacBook-Pro" = darwin.lib.darwinSystem {
+        "Waynes-MacBook-Pro" = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
-            ./darwin/darwin.nix
-
-            # FIXME Not working missing OpenSSH enable - Encryption
-            #sops-nix.nixosModules.sops
-            # FIXME Not working when installing stuff via home-manager - should I? Template flakes are not using home-manager either
-            # ./secrets/encryption.nix
-
             home-manager.darwinModules.home-manager
             {
               nixpkgs = nixpkgsConfig;
@@ -101,9 +91,9 @@
                 useGlobalPkgs = true;
                 # NOTE setting to true will create an unrecognized path for binaries for emacs
                 useUserPackages = false;
-                users.matthias = import ./home/home.nix;
+                users.wayne = import ./home/home.nix;
               };
-              users.users.matthias.home = "/Users/matthias";
+              users.users.wayne.home = "/Users/wayne";
             }
 
             # FIXME move inside ./darwin/darwin.nix file if possible - keep the flake short
@@ -114,7 +104,7 @@
                 enable = true;
                 autoMigrate = true;
                 # FIXME use the user name set via darwinConfiguration
-                user = "matthias";
+                user = "wayne";
 
                 # TODO check if this is necessary
                 taps = {
@@ -128,49 +118,6 @@
               };
             }
 
-          ];
-          specialArgs = {
-            inherit inputs;
-          };
-        };
-        "MacPro" = darwin.lib.darwinSystem {
-          system = "x86_64-darwin";
-          modules = [
-            ./darwin/darwin.nix
-            home-manager.darwinModules.home-manager
-            {
-              nixpkgs = nixpkgsConfig;
-
-              home-manager = {
-                # FIXME sync with all macosx configurations
-                useGlobalPkgs = true;
-                # NOTE setting to true will create an unrecognized path for binaries for emacs
-                useUserPackages = false;
-
-                users.mat = import ./home/home.nix;
-              };
-              users.users.mat.home = "/Users/mat";
-            }
-
-            # FIXME move inside ./darwin/darwin.nix file if possible - keep the flake short
-            # TODO Do this for all MacOSX systems NOT only this single one
-            nix-homebrew.darwinModules.nix-homebrew
-            {
-              nix-homebrew = {
-                enable = true;
-                autoMigrate = true;
-                # FIXME use the user name set via darwinConfiguration
-                user = "mat";
-
-                # TODO check if this is necessary
-                taps = {
-                  "homebrew/homebrew-core" = homebrew-core;
-                  "homebrew/homebrew-cask" = homebrew-cask;
-                  "clok/homebrew-sm" = homebrew-sm;
-                };
-                mutableTaps = false;
-              };
-            }
           ];
           specialArgs = {
             inherit inputs;
