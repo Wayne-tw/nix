@@ -7,19 +7,10 @@
 
   programs.git = {
     enable = true;
-
-    lfs.enable = true;
-  };
-
-  # TODO decide on usage
-  # git alternative
-  programs.jujutsu = {
-    enable = true;
   };
 
   # Manage multiple git repositories
   home.packages = with pkgs; [
-    mani
     pre-commit
   ];
 }
