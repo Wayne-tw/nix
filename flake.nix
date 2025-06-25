@@ -34,14 +34,6 @@
       url = "github:fujiwara/homebrew-tap";
       flake = false;
     };
-    homebrew-emacsmacport = {
-      url = "github:railwaycat/homebrew-emacsmacport";
-      flake = false;
-    };
-    homebrew-emacsplus = {
-      url = "github:d12frosted/homebrew-emacs-plus";
-      flake = false;
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -78,8 +70,6 @@
       homebrew-sm,
       homebrew-gossm,
       homebrew-awslim,
-      homebrew-emacsmacport,
-      homebrew-emacsplus,
       ...
     }@inputs:
     let
@@ -133,8 +123,6 @@
                   "clok/homebrew-sm" = homebrew-sm;
                   "gjbae1212/homebrew-gossm" = homebrew-gossm;
                   "fujiwara/homebrew-tap" = homebrew-awslim;
-                  "railwaycat/homebrew-emacsmacport" = homebrew-emacsmacport;
-                  "d12frosted/homebrew-emacs-plus" = homebrew-emacsplus;
                 };
                 mutableTaps = false;
               };

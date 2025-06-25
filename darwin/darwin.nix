@@ -223,26 +223,6 @@
       "choose-gui"
       # TODO move into a template/aws fake - but curently no package
       "awslim"
-      # emacs
-      # NOTE only via cli, problems with the clipboard - fallback
-      # "emacs"
-      #{
-      #  name = "emacs-plus";
-      #  args = [
-      #    "with-xwidgets"
-      #    "with-imagemagick"
-      #  ];
-      #  start_service = true;
-      #  restart_service = "changed";
-      #}
-      # NOTE only 29.1
-      #{
-      #  name = "emacs-mac";
-      #  args = [ "with-modules" ];
-      #}
-      #"libgccjit"
-      # FIXME find out how to install with parameters
-      #"emacs-mac --with-modules --with-xwidgets"
       # Shell debugger
       # https://bashdb.readthedocs.io/en/latest/entry-exit.html
       "bashdb"
