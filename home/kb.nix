@@ -30,31 +30,9 @@ in
     pkgs.obsidian
     #pkgs_obsidian_1_8_7.obsidian
     # NOTE service execution is os dependent, hence a piece is in darwin.nix
-    pkgs.ollama
-    # Knowledge management via LSP
-    # https://oxide.md/Home
-    pkgs.markdown-oxide
-    # Markdown support
 
     # Render mermaid diagrams, provides mmdc
     pkgs.mermaid-cli
   ];
-
-  # TODO Install some models
-  # Obsidian
-  # - nomic-embed-text
-  # - llama3.1
-  # - gemma2
-  # Emacs - Might need to be setup in emacs.nix
-  # - zephyr
-  #
-
-  # FIXME not working, missing homebrew context
-  #homebrew = {
-  #  casks = [
-  #    "obsidian"
-  #    "msty"
-  #  ];
-  #};
 
 }
