@@ -286,8 +286,6 @@
       "icanhazshortcut"
       # Keyboard Configuration Management
       "vial"
-      # NOTE not available as nixpkgs anymore
-      "zoom"
     ];
 
     masApps = {
