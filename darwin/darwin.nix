@@ -11,7 +11,7 @@
     home-manager
   ];
 
-  # Use a custom configuration.nix location. Whereever your cloned files are.
+  # Use a custom configuration.nix location. Where ever your cloned files are.
   environment.darwinConfig = "$HOME/nix";
 
   # Auto upgrade nix package and the daemon service.
