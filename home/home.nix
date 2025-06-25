@@ -65,10 +65,9 @@
     };
 
     shellAliases = {
-      "sys-rebuild" = "darwin-rebuild switch --flake ~/projects/config/dotfiles-slim --refresh";
+      "sys-rebuild" = "sudo darwin-rebuild switch --flake ~/projects/config/dotfiles-slim --refresh";
       "sys-rollback" = "darwin-rebuild switch --rollback";
-      "sys-update" =
-        "cd ~/projects/config/dotfiles-slim && nix flake update && darwin-rebuild switch --flake . --refresh";
+      "sys-update" = "cd ~/projects/config/dotfiles-slim && nix flake update";
       "sys-upgrade" = "sys-update && sys-rebuild";
       "sys-optimise" = "nix-store --optimise";
     };
