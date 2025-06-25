@@ -1,1 +1,0 @@
-The files `neo.icns` and `neo.keylayout` are published by the Neo project on their [Gitea instance](https://git.neo-layout.org/neo/neo-layout/src/branch/master/mac_osx/neo-layouts.bundle/Contents/Resources) and are available under the terms of GPLv3.
