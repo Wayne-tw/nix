@@ -19,5 +19,6 @@
     mermaid-cli
     k9s
     iterm2
+    jetbrains.idea-ultimate
   ];
 }
