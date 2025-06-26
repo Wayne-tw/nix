@@ -113,6 +113,7 @@
       # NOTE Defined here because of missing direnv support
       #      Should not harm either - just points nowhere
       # Terraform
+      k  = "kubectl";
       tf = "terraform";
       tfi = "terraform init -upgrade";
       tfp = "terraform plan";
