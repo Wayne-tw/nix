@@ -17,5 +17,6 @@
     teams
     obsidian
     raycast
+    mermaid-cli
   ];
 }

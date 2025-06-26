@@ -12,7 +12,6 @@
     ./git.nix
     ./editor.nix
     ./work.nix
-    ./kb.nix
   ];
 
   home = {
