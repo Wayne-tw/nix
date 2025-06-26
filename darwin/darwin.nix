@@ -86,6 +86,7 @@
     ];
 
     masApps = {
+      "RunCat"               = 1429033973;
       "1Password for Safari" = 1569813296;
     };
   };
