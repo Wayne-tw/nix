@@ -78,11 +78,7 @@
     casks = [
       # TODO Migrate to nixpkgs _1password-gui when package is not broken anymore
       "1password"
-      # TODO Migrate to nixpkgs
-      "raycast"
-      # TODO Migrate to nixpkgs
-      "obsidian"
-      "microsoft-teams"
+      "openlens"
     ];
 
     masApps = {

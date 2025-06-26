@@ -134,9 +134,5 @@
 
     # TODO Check if needed
     bash.enable = true;
-    # TODO Try
-    #     bashrcExtra = ''
-    #  export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-    #'';
   };
 }

@@ -13,9 +13,6 @@
     ./editor.nix
     ./work.nix
     ./kb.nix
-    # project specific
-    # ./p1.nix
-    ./p2.nix
   ];
 
   home = {
