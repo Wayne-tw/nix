@@ -85,7 +85,7 @@
             home-manager.darwinModules.home-manager
             {
               nixpkgs = nixpkgsConfig;
-
+              system.stateVersion = 6;
               home-manager = {
                 # FIXME sync with all macosx configurations
                 useGlobalPkgs = true;
