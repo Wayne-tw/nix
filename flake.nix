@@ -86,6 +86,11 @@
             {
               nixpkgs = nixpkgsConfig;
               system.stateVersion = 6;
+              
+              #This is required if you're using Determinate Nix,it manages Nix itself via its own system daemon. 
+              #This conflicts with nix-darwin's built-in Nix management, unless you explicitly disable it.
+              nix.enable = false;
+
               home-manager = {
                 # FIXME sync with all macosx configurations
                 useGlobalPkgs = true;
