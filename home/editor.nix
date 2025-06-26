@@ -10,5 +10,6 @@
     vscode-extensions.hashicorp.hcl
     vscode-extensions.hashicorp.terraform
     vscode-extensions.golang.go
+    jetbrains.idea-ultimate
   ];
   }
