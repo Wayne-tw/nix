@@ -1,44 +1,28 @@
-# Dotfiles
+# Nix
 
-This is to describe the bare-bones development system I use. Supports Intel and Silicon Macs.
+These are the configurations to set up my Mac
 
-## Tasks
-
-- [x] Add default browser
-- [x] Support neo2 keyboard layout
-- [x] Add ~/bin into PATH - used by direnv: tfswitch
-- [x] Deal with project specific communication tooling: mattermost, ms-teams, zoom
-- [x] Unfree: Beeper, logseq, draw.io, notion, notion-calendar, spotify
-- [x] Decide for shell fish or zsh -> zsh
-- [x] Add opt/homebrew/bin/ to PATH
-- [ ] Support touchid for cli
-- [ ] gossm need file '/Users/matthias/.aws/credentials_temporary'
-- [ ] Configure Terraform Provider Cache environment variable
-- [ ] Add Docker and colima
-- [ ] Add statusbar
-- [ ] Add doomemcs configuration, dotenc, ispell
-- [ ] raycast plugins
-- [ ] logseq plugins
-- [ ] restish configuration
-- [ ] import old (before fleek) starship configuration
-- [ ] Support for installing [Insta360 Link Software](https://www.insta360.com/de/download/insta360-link)
-- [x] Support installing none packaged applications via `go install -> e.g. check templates -> k8s`
-
+This repo is forked from MatthiasScholz I have added my custom configuration. 
 ## Install Nix
 
 On OSX: [Determinate Systems Installer](https://github.com/DeterminateSystems/nix-installer).
 
-## Bootstrap
 
+## Bootstrap
+```shell
+xcode-select --install
+cd ~/
+clone or download this repo as zip
+```
 ### Darwin/Linux
 
-`nix run nix-darwin -- switch --flake github:matthiasscholz/dotfiles-slim`
+`sudo nix run nix-darwin -- switch --flake . --refresh`
 
 ## Update
 
 ### Darwin
 
-`rebuild`
+`sys-rebuild`
 
 ## References
 
