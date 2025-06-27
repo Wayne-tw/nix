@@ -58,22 +58,41 @@
      enable = true;
 
       settings = {
-        cmd_duration = {
-          min_time = 1000;
-          format = "⏱ [$duration](bold yellow)";
-        };
+      #Enable commands and icons in single line
+      format = "$directory$git_branch$git_status$cmd_duration $character";
+      right_format = "$time";
 
-        character = {
-          success_symbol = "[❯](dimmed green)";
-          error_symbol = "[❯](dimmed red)";
-        };
+      directory = {
+        truncation_length = 3;
+        style = "cyan";
+      };
 
-        git_status = {
-          style = "bold yellow";
-          format = "([$all_status$ahead_behind]($style) )";
-        };
+      git_status = {
+        style = "bold yellow";
+        format = "([$all_status$ahead_behind]($style) )";
+      };
 
-        jobs.disabled = true;
+      cmd_duration = {
+        min_time = 1000;
+        format = "⏱ [$duration](bold yellow)";
+      };
+
+      time = {
+        disabled = false;
+        format = "[$time]($style)";
+        time_format = "%H:%M";
+        style = "bold dimmed white";
+      };
+
+      character = {
+        success_symbol = "[❯](dimmed green)";
+        error_symbol = "[❯](dimmed red)";
+      };
+
+      jobs = {
+      disabled = true;
+      };
+
       };
     };
 
