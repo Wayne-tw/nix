@@ -55,6 +55,20 @@
     };
   };
 
+#checks if it has the app and then launch service on open
+  launchd.user.agents.runcat = {
+    serviceConfig = {
+      ProgramArguments = [
+        "/bin/sh"
+        "-c"
+        "[ -d /Applications/RunCat.app ] && /usr/bin/open -a /Applications/RunCat.app"
+      ];
+      RunAtLoad = true;
+      KeepAlive = false;
+    };
+  };
+
+
   programs = {
     gnupg.agent.enable = true;
   };
@@ -83,6 +97,7 @@
       ];
     };
     finder = {
+      ShowStatusBar = true;
       AppleShowAllExtensions = true;
       ShowPathbar = true;
       FXEnableExtensionChangeWarning = false;
