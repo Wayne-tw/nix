@@ -101,18 +101,7 @@
 
         git_status = {
           style = "bold yellow";
-          format = "([$all_status$ahead_count⇡$behind_count⇣]($style) )";
-          ahead = "⇡";
-          behind = "⇣";
-          diverged = "⇕";
-          up_to_date = "";
-          untracked = "?";
-          staged = "+";
-          conflicted = "=";
-          deleted = "✘";
-          stashed = "$";
-          modified = "!";
-          renamed = "»";
+          format = "([$all_status$ahead_behind]($style) )";
         };
 
         cmd_duration = {
