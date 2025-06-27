@@ -2,12 +2,11 @@
 
 {
   system.primaryUser = "wayne";
+  environment.darwinConfig = "$HOME/nix";
 
   environment.systemPackages = with pkgs; [
     home-manager
   ];
-
-  environment.darwinConfig = "$HOME/nix";
 
   nix = {
     enable = false;
@@ -25,19 +24,16 @@
       auto-optimise-store = false
     '';
   };
-
   homebrew = {
     enable = true;
 
     taps = [
       "gjbae1212/gossm"
     ];
-
     brews = [
        "mas"
        "gossm"
     ];
-
     casks = [
     "google-chrome"
     "1password"
@@ -67,9 +63,7 @@
     pkgs.jetbrains-mono
     pkgs.nerd-fonts.jetbrains-mono
   ];
-
   security.pam.services.sudo_local.touchIdAuth = true;
-
   system.defaults = {
     dock = {
       autohide = true;
@@ -84,6 +78,8 @@
         "/System/Applications/Freeform.app"
         "/Applications/zoom.us.app"
         "/Applications/Google Chrome.app"
+        "/Users/wayne/Applications/Home Manager Apps/Warp.app"
+        "/Applications/Obsidian.app"
       ];
     };
     finder = {
