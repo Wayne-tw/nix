@@ -65,6 +65,7 @@
 
   fonts.packages = [
     pkgs.jetbrains-mono
+    pkgs.nerd-fonts.jetbrains-mono
   ];
 
   security.pam.services.sudo_local.touchIdAuth = true;

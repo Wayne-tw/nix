@@ -8,8 +8,6 @@
       cat = "bat";
       # replace cd
       cd = "z";
-      # HACK Trying to compile vterm for emacs
-      glibtool = "libtool";
     };
   };
 
@@ -56,24 +54,21 @@
     dircolors.enable = true;
 
     # Prompt
-    starship = {
+   starship = {
       enable = true;
-
       settings = {
-        command_timeout = 800;
-        format = "[$all](dimmed white)";
-
+      format = ''
+        $directory$git_branch$git_status$nodejs$python$cmd_duration
+        $character
+        '';
         character = {
-          success_symbol = "[❯](dimmed green)";
-          error_symbol = "[❯](dimmed red)";
+          success_symbol = "[❯](bold green)";
+          error_symbol = "[❯](bold red)";
         };
-
         git_status = {
-          style = "bold yellow";
           format = "([$all_status$ahead_behind]($style) )";
+          style = "bold yellow";
         };
-
-        jobs.disabled = true;
       };
     };
 
@@ -115,6 +110,10 @@
       # NOTE Defined here because of missing direnv support
       #      Should not harm either - just points nowhere
       # Terraform
+
+      ls = "eza";
+      ll = "eza -l";
+      lt = "eza --tree";
       k  = "kubectl";
       tf = "terraform";
       tfi = "terraform init -upgrade";
