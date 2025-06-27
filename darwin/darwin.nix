@@ -76,12 +76,14 @@
       orientation = "left";
       show-process-indicators = false;
       show-recents = false;
-      static-only = true;
       mru-spaces = false;
       persistent-apps = [
-        "/System/Applications/Calendar.app"
+        "/System/Applications/Launchpad.app"
+        "/System/Applications/System Settings.app"
+        "/System/Applications/Notes.app"
+        "/System/Applications/Freeform.app"
+        "/Applications/zoom.us.app"
         "/Applications/Google Chrome.app"
-        "/Applications/OpenLens.app"
       ];
     };
     finder = {
