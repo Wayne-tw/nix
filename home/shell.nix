@@ -53,7 +53,7 @@
     zoxide.enable = true;
     dircolors.enable = true;
 
-    # Prompt
+    # Terminal configurations Prompt
    starship = {
      enable = true;
 
