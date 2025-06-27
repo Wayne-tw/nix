@@ -61,7 +61,6 @@
 
   programs = {
     gnupg.agent.enable = true;
-    zsh.enable = true;
   };
 
   fonts.packages = [

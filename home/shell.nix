@@ -27,6 +27,12 @@
   programs = {
     # Helper
     # .Replacement for 'ls'
+    zsh = {
+        enable = true;
+        oh-my-zsh = {
+            enable = true;
+        };
+    };
     eza = {
       enable = true;
       enableBashIntegration = true;
@@ -71,10 +77,6 @@
       };
     };
 
-    # ZSH
-    zsh.enable = true;
-    # TODO move terraform configuration into the related template flake
-    # TODO move docker configuration into the related template flake - if possible
     # Configure colima
     zsh.envExtra = ''
       export DOCKER_HOST=unix://$HOME/.colima/docker.sock
