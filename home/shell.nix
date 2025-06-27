@@ -55,20 +55,25 @@
 
     # Prompt
    starship = {
-      enable = true;
+     enable = true;
+
       settings = {
-      format = ''
-        $directory$git_branch$git_status$nodejs$python$cmd_duration
-        $character
-        '';
+        cmd_duration = {
+          min_time = 1000;
+          format = "⏱ [$duration](bold yellow)";
+        };
+
         character = {
-          success_symbol = "[❯](bold green)";
-          error_symbol = "[❯](bold red)";
+          success_symbol = "[❯](dimmed green)";
+          error_symbol = "[❯](dimmed red)";
         };
+
         git_status = {
-          format = "([$all_status$ahead_behind]($style) )";
           style = "bold yellow";
+          format = "([$all_status$ahead_behind]($style) )";
         };
+
+        jobs.disabled = true;
       };
     };
 
