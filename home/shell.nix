@@ -49,6 +49,8 @@
         catp = "bat -P";
         cd = "z";
 
+        # git
+        gp = "git push";
         # ls
         ls = "eza";
         ll = "eza -l";

@@ -4,6 +4,7 @@
 
   home.packages = with pkgs; [
     # VS Code for AI coding agent trials
+    neovim
     vscode
     #vscode-with-extensions
     vscode-extensions.continue.continue
