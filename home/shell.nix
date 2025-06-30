@@ -49,8 +49,12 @@
         catp = "bat -P";
         cd = "z";
 
+        # vim
+        vim = "nvim";
+
         # git
         gp = "git push";
+
         # ls
         ls = "eza";
         ll = "eza -l";
