@@ -28,7 +28,6 @@
 [alias]
   st = status --short --branch
   co = checkout
-  gp = git push
   aa = add --all
   au = add --update
   fa = fetch --all
