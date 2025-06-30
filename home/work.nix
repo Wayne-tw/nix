@@ -13,6 +13,6 @@
     docker-compose
     mermaid-cli
     k9s
-    awscli
+    awscli2
   ];
 }
