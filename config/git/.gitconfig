@@ -28,6 +28,7 @@
 [alias]
   st = status --short --branch
   co = checkout
+  gp = git push
   aa = add --all
   au = add --update
   fa = fetch --all
@@ -53,7 +54,7 @@
   r = log --graph --pretty='tformat:%C(auto,yellow)%h%C(auto,reset) %C(auto,green)(%ar)%C(auto,reset) %C(auto,bold blue)<%an>%C(auto,reset) %C(auto,red)%d%C(auto,reset) %s' -20
   ra = log --graph --all --pretty='tformat:%C(auto,yellow)%h%C(auto,reset) %C(auto,green)(%ar)%C(auto,reset) %C(auto,bold blue)<%an>%C(auto,reset) %C(auto,red)%d%C(auto,reset) %s' -20
   lf = log --first-parent --oneline
-  my-commits = log --author='Matthias Scholz' --author-date-order --date=format:'%a %b %d %r' --format='%h | %ad | %s'
+  my-commits = log --author='Wayne Tan' --author-date-order --date=format:'%a %b %d %r' --format='%h | %ad | %s'
   jump = "!$(brew --prefix git)/share/git-core/contrib/git-jump/git-jump"
 [user]
   email = wayne.tan@thoughtworks.com
