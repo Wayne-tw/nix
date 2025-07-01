@@ -15,7 +15,9 @@
     nix-direnv.enable = true;
   };
 
-  # Add convience to init direnv
+# Add convience to init direnv
+# usage dvd dotnet, dvd go
+# Uses MatthiasScholz templates https://github.com/MatthiasScholz/templates/tree/main
   programs.zsh.initContent = ''
     dvd () {
       local readonly TEMPLATE=$1
