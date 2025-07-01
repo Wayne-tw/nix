@@ -12,6 +12,7 @@
     ./git.nix
     ./editor.nix
     ./work.nix
+    ./direnv.nix
   ];
 
   home = {
