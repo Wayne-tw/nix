@@ -14,5 +14,6 @@
     mermaid-cli
     k9s
     awscli2
+    terramate
   ];
 }
