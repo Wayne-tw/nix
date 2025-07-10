@@ -34,6 +34,7 @@
        "mas"
        "gossm"
        "tfenv"
+       "tf-summarize"
     ];
     casks = [
     "google-chrome"
