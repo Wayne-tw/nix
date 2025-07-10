@@ -33,6 +33,7 @@
     brews = [
        "mas"
        "gossm"
+       "tfenv"
     ];
     casks = [
     "google-chrome"
