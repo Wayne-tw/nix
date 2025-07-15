@@ -15,5 +15,6 @@
     k9s
     awscli2
     terramate
+    go-task
   ];
 }
