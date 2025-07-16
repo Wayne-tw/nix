@@ -16,7 +16,7 @@
     zsh = {
       enable = true;
       oh-my-zsh.enable = true;
-
+      syntaxHighlighting.enable = true;
       enableCompletion = true;
       enableVteIntegration = true;
 
