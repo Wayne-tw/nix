@@ -16,5 +16,6 @@
     awscli2
     terramate
     go-task
+    adr-tools
   ];
 }
