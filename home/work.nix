@@ -17,5 +17,6 @@
     terramate
     go-task
     adr-tools
+    python3
   ];
 }
