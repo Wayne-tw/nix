@@ -15,6 +15,7 @@
     k9s
     awscli2
     terramate
+    tflint
     go-task
     adr-tools
     python3
