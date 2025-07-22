@@ -16,6 +16,7 @@
     awscli2
     terramate
     tflint
+    trivy
     go-task
     adr-tools
     python3
