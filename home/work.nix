@@ -16,6 +16,7 @@
     awscli2
     terramate
     tflint
+    hcledit
     trivy
     go-task
     adr-tools
