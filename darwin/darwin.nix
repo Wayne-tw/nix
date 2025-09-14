@@ -28,16 +28,14 @@
     enable = true;
     user = "wayne";
 
-    # taps = [
-    #   "gjbae1212/gossm"
-    # ];
     brews = [
        "mas"
-       "gossm"
 #TODO For terraform to work correctly, I need to manually create a cache folder in /Users/wayne/.terraform.d/plugin-cache
 # Fix this with Nix
        "tfenv"
        "tf-summarize"
+#  TAPS are managed in flake.nix
+       "gossm"       
         "dojo"
     ];
     casks = [
