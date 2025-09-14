@@ -21,5 +21,6 @@
     go-task
     adr-tools
     python3
+    gnumake
   ];
 }
