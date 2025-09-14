@@ -26,10 +26,11 @@
   };
   homebrew = {
     enable = true;
+    user = "wayne";
 
-    taps = [
-      "gjbae1212/gossm"
-    ];
+    # taps = [
+    #   "gjbae1212/gossm"
+    # ];
     brews = [
        "mas"
        "gossm"
@@ -37,6 +38,7 @@
 # Fix this with Nix
        "tfenv"
        "tf-summarize"
+        "dojo"
     ];
     casks = [
     "google-chrome"
