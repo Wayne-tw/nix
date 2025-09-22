@@ -22,5 +22,6 @@
     adr-tools
     python3
     gnumake
+    devenv
   ];
 }
