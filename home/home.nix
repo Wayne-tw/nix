@@ -26,6 +26,15 @@
       tree
     ];
 
+    # FINAL FIX: Declaratively create the Terraform cache directory
+    # -------------------------------------------------------------
+    file = {
+      ".terraform.d/plugin-cache" = {
+        source = pkgs.emptyDirectory;                # Standard read/write/execute permissions
+      };
+    };
+    # -------------------------------------------------------------
+
     shellAliases = {
       "sys-rebuild" = "sudo darwin-rebuild switch --flake ~/nix --refresh";
       "sys-rollback" = "darwin-rebuild switch --rollback";

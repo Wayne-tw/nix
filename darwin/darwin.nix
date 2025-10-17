@@ -45,11 +45,9 @@
 
     brews = [
        "mas"
-#TODO For terraform to work correctly, I need to manually create a cache folder in /Users/wayne/.terraform.d/plugin-cache
-# Fix this with Nix
        "tfenv"
        "tf-summarize"
-#  TAPS are managed in flake.nix
+      # brew taps are managed in flake.nix
        "gossm"       
         "dojo"
     ];
