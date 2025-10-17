@@ -23,5 +23,7 @@
     python3
     gnumake
     devenv
+    # CLI tool to help you manage multiple repositories
+    mani
   ];
 }
