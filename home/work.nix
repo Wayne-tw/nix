@@ -22,10 +22,6 @@
     adr-tools
     python3
     gnumake
-
-    # To use caching for devenv, you will need to add a trusted user in /etc/nix/nix.custom.conf
-    #  trusted-users = root wayne
-    # Then restart the mac
     devenv
     # CLI tool to help you manage multiple repositories
     mani
