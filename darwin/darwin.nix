@@ -4,6 +4,19 @@
   system.primaryUser = "wayne";
   environment.darwinConfig = "$HOME/nix";
 
+# ----------------------------------------------------------------------
+  # FIX: Declaratively create /etc/nix/nix.custom.conf for Determinate Nix
+  # ----------------------------------------------------------------------
+  environment.etc."nix/nix.custom.conf".text = ''
+    # This configuration is necessary to allow 'wayne' to use binary caches
+    # like the one required by devenv (Cachix) without being root.
+    # We include root and for safety and system function.
+    # Written by https://github.com/DeterminateSystems/nix-installer.
+    # The contents below are based on options specified at installation time.
+    trusted-users = root wayne
+  '';
+  # ----------------------------------------------------------------------
+
   environment.systemPackages = with pkgs; [
     home-manager
   ];
@@ -16,6 +29,8 @@
         "nix-command"
         "flakes"
       ];
+      # NOTE: The trusted-users setting here is ignored because nix.enable = false;
+      # trusted-users = [ "wayne" ];
       trusted-users = [
         "wayne"
       ];
