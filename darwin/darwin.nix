@@ -23,21 +23,6 @@
 
   nix = {
     enable = false;
-    package = pkgs.nix;
-    settings = {
-      extra-experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-      # NOTE: The trusted-users setting here is ignored because nix.enable = false;
-      # trusted-users = [ "wayne" ];
-      trusted-users = [
-        "wayne"
-      ];
-    };
-    extraOptions = ''
-      auto-optimise-store = false
-    '';
   };
   homebrew = {
     enable = true;
