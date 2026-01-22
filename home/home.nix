@@ -24,6 +24,7 @@
       nixd
       ripgrep
       tree
+      flameshot
     ];
 
     # FINAL FIX: Declaratively create the Terraform cache directory
